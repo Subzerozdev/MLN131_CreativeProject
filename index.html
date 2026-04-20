@@ -71,7 +71,7 @@
 
 <nav>
   <div class="nav-inner">
-    <span class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</span>
+    <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html">Chức năng</a></li>
@@ -80,6 +80,7 @@
       <li><a href="so-sanh.html">So sánh</a></li>
       <li><a href="bien-doi.html">Biến đổi</a></li>
       <li><a href="ket-luan.html">Kết luận</a></li>
+      <li><a href="ai-usage.html">AI Usage</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
       <span></span><span></span><span></span>
@@ -116,7 +117,7 @@
     </div>
     <div class="hero-scroll reveal">
       <span class="scroll-dot"></span>
-      <span>7 trang nội dung · Cuộn xuống để xem tổng quan</span>
+      <span>7 trang nội dung + Quiz tương tác · Cuộn xuống để khám phá</span>
     </div>
     <a href="khai-niem.html" class="hero-btn reveal">
       Bắt đầu khám phá →
@@ -175,16 +176,130 @@
         <span class="ov-card-link">Xem trang →</span>
       </a>
     </div>
-    <div style="max-width:380px;" class="reveal">
+    <div class="cards-grid cards-grid--3 reveal">
       <a href="ket-luan.html" class="ov-card">
         <div class="ov-card-num">07</div>
         <div class="ov-card-title">Kết luận & Chính sách</div>
         <div class="ov-card-sub">Tổng kết lý luận, đường lối Đảng–Nhà nước và tài liệu tham khảo.</div>
         <span class="ov-card-link">Xem trang →</span>
       </a>
+      <a href="ai-usage.html" class="ov-card" style="border-color:rgba(52,152,219,.3);">
+        <div class="ov-card-num" style="color:#3498db;">+</div>
+        <div class="ov-card-title">AI Usage · Phụ lục</div>
+        <div class="ov-card-sub">Minh bạch công cụ AI, prompt đã dùng, cam kết liêm chính học thuật.</div>
+        <span class="ov-card-link" style="color:#3498db;">Xem phụ lục →</span>
+      </a>
+      <a href="#quiz" class="ov-card" style="border-color:rgba(26,122,74,.3);">
+        <div class="ov-card-num" style="color:var(--green);">?</div>
+        <div class="ov-card-title">Quiz · Trắc nghiệm</div>
+        <div class="ov-card-sub">Kiểm tra kiến thức Chương 7 với 5 câu hỏi trắc nghiệm tương tác.</div>
+        <span class="ov-card-link" style="color:var(--green);">Làm quiz →</span>
+      </a>
     </div>
   </div>
 </section>
+
+<!-- QUIZ TƯƠNG TÁC -->
+<section class="section section--gray" id="quiz">
+  <div class="container">
+    <div class="section-label reveal">Kiểm tra kiến thức</div>
+    <h2 class="section-title reveal">Bạn hiểu Chương 7 đến đâu?</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">
+      Trả lời 5 câu hỏi trắc nghiệm nhanh để kiểm tra mức độ hiểu về vấn đề gia đình
+      trong thời kỳ quá độ lên CNXH. Chọn đáp án và bấm "Kiểm tra" để xem kết quả.
+    </p>
+
+    <div id="quizContainer" class="reveal">
+      <!-- Q1 -->
+      <div class="quiz-question" data-correct="1">
+        <div class="quiz-question-text">
+          <span class="quiz-num">1</span>
+          <span>Theo chủ nghĩa Mác–Lênin, gia đình được hình thành chủ yếu dựa trên cơ sở nào?</span>
+        </div>
+        <div class="quiz-options">
+          <label class="quiz-option"><span class="opt-letter">A</span><span>Quan hệ kinh tế và lợi ích vật chất</span></label>
+          <label class="quiz-option"><span class="opt-letter">B</span><span>Hôn nhân, huyết thống và quan hệ nuôi dưỡng</span></label>
+          <label class="quiz-option"><span class="opt-letter">C</span><span>Quan hệ xã hội và cộng đồng</span></label>
+          <label class="quiz-option"><span class="opt-letter">D</span><span>Quan hệ chính trị và giai cấp</span></label>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-question" data-correct="2">
+        <div class="quiz-question-text">
+          <span class="quiz-num">2</span>
+          <span>Gia đình có mấy chức năng cơ bản theo giáo trình CNXHKH?</span>
+        </div>
+        <div class="quiz-options">
+          <label class="quiz-option"><span class="opt-letter">A</span><span>2 chức năng: kinh tế và giáo dục</span></label>
+          <label class="quiz-option"><span class="opt-letter">B</span><span>3 chức năng: tái sản xuất, kinh tế, tình cảm</span></label>
+          <label class="quiz-option"><span class="opt-letter">C</span><span>4 chức năng: tái sản xuất, nuôi dưỡng–giáo dục, kinh tế, tâm lý–tình cảm</span></label>
+          <label class="quiz-option"><span class="opt-letter">D</span><span>5 chức năng bao gồm cả chức năng chính trị</span></label>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-question" data-correct="1">
+        <div class="quiz-question-text">
+          <span class="quiz-num">3</span>
+          <span>Sự chuyển đổi từ gia đình truyền thống sang gia đình hạt nhân là gì?</span>
+        </div>
+        <div class="quiz-options">
+          <label class="quiz-option"><span class="opt-letter">A</span><span>Sự suy thoái đạo đức và giá trị gia đình</span></label>
+          <label class="quiz-option"><span class="opt-letter">B</span><span>Quy luật tất yếu khi lực lượng sản xuất phát triển</span></label>
+          <label class="quiz-option"><span class="opt-letter">C</span><span>Ảnh hưởng tiêu cực từ văn hóa phương Tây</span></label>
+          <label class="quiz-option"><span class="opt-letter">D</span><span>Chỉ xảy ra ở các nước phát triển</span></label>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="quiz-question" data-correct="3">
+        <div class="quiz-question-text">
+          <span class="quiz-num">4</span>
+          <span>Hôn nhân tiến bộ theo CNXHKH có đặc trưng nào?</span>
+        </div>
+        <div class="quiz-options">
+          <label class="quiz-option"><span class="opt-letter">A</span><span>Do cha mẹ sắp đặt để đảm bảo môn đăng hộ đối</span></label>
+          <label class="quiz-option"><span class="opt-letter">B</span><span>Dựa trên lợi ích kinh tế là chủ yếu</span></label>
+          <label class="quiz-option"><span class="opt-letter">C</span><span>Không cần pháp luật can thiệp</span></label>
+          <label class="quiz-option"><span class="opt-letter">D</span><span>Tự nguyện, bình đẳng, một vợ một chồng</span></label>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="quiz-question" data-correct="2">
+        <div class="quiz-question-text">
+          <span class="quiz-num">5</span>
+          <span>Quy mô hộ gia đình Việt Nam thay đổi như thế nào từ 1979 đến 2019?</span>
+        </div>
+        <div class="quiz-options">
+          <label class="quiz-option"><span class="opt-letter">A</span><span>Tăng từ 3,6 lên 4,8 người/hộ</span></label>
+          <label class="quiz-option"><span class="opt-letter">B</span><span>Không thay đổi đáng kể</span></label>
+          <label class="quiz-option"><span class="opt-letter">C</span><span>Giảm từ 4,8 xuống 3,6 người/hộ</span></label>
+          <label class="quiz-option"><span class="opt-letter">D</span><span>Giảm từ 6,0 xuống 2,0 người/hộ</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2rem;" class="reveal">
+      <button class="quiz-btn" id="quizCheck" onclick="checkQuiz()">Kiểm tra đáp án</button>
+      <button class="quiz-btn" id="quizReset" onclick="resetQuiz()" style="display:none;background:var(--navy);color:var(--gold);border:1px solid rgba(201,168,76,.4);">Làm lại</button>
+    </div>
+    <div class="quiz-score" id="quizScore">
+      <div class="quiz-score-num" id="quizScoreNum"></div>
+      <div class="quiz-score-label" id="quizScoreLabel"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ẢNH MINH HỌA -->
+<div style="height:320px;background:linear-gradient(to right,rgba(10,20,40,.7) 0%,rgba(10,20,40,.4) 50%,rgba(10,20,40,.7) 100%),url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.95rem,2.2vw,1.5rem);font-weight:700;color:#fff;max-width:620px;line-height:1.55;font-style:italic;">"Gia đình là nơi cuộc sống bắt đầu và tình yêu không bao giờ kết thúc — dù hình thức có thay đổi."</p>
+    <p style="margin-top:.85rem;font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Chương 7 · Vấn đề Gia đình · MLN131</p>
+  </div>
+</div>
 
 <!-- TÌNH HUỐNG PREVIEW -->
 <section class="section section--cream">
@@ -254,6 +369,47 @@
         navLinks.classList.remove('open');
       }
     });
+  }
+
+  // QUIZ
+  document.querySelectorAll('.quiz-option').forEach(opt => {
+    opt.addEventListener('click', function() {
+      const siblings = this.closest('.quiz-options').querySelectorAll('.quiz-option');
+      siblings.forEach(s => s.classList.remove('selected'));
+      this.classList.add('selected');
+    });
+  });
+  function checkQuiz() {
+    const questions = document.querySelectorAll('.quiz-question');
+    let score = 0;
+    questions.forEach(q => {
+      const correct = parseInt(q.dataset.correct);
+      const options = q.querySelectorAll('.quiz-option');
+      let selectedIdx = -1;
+      options.forEach((opt, i) => { if(opt.classList.contains('selected')) selectedIdx = i; });
+      options.forEach((opt, i) => {
+        opt.style.pointerEvents = 'none';
+        if(i === correct) opt.classList.add('quiz-correct');
+        else if(i === selectedIdx && i !== correct) opt.classList.add('quiz-wrong');
+      });
+      if(selectedIdx === correct) score++;
+    });
+    const scoreEl = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = score + '/5';
+    const msgs = ['Hãy xem lại nội dung nhé!','Cần ôn thêm một chút!','Khá tốt!','Giỏi lắm!','Xuất sắc! Bạn nắm vững Chương 7!'];
+    document.getElementById('quizScoreLabel').textContent = msgs[score] || msgs[0];
+    scoreEl.classList.add('show');
+    document.getElementById('quizCheck').style.display = 'none';
+    document.getElementById('quizReset').style.display = 'inline-flex';
+  }
+  function resetQuiz() {
+    document.querySelectorAll('.quiz-option').forEach(opt => {
+      opt.classList.remove('selected','quiz-correct','quiz-wrong');
+      opt.style.pointerEvents = '';
+    });
+    document.getElementById('quizScore').classList.remove('show');
+    document.getElementById('quizCheck').style.display = 'inline-flex';
+    document.getElementById('quizReset').style.display = 'none';
   }
 </script>
 </body>

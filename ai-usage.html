@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ứng dụng AI có Trách nhiệm · MLN131</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="khai-niem.html">Khái niệm</a></li>
+      <li><a href="chuc-nang.html">Chức năng</a></li>
+      <li><a href="co-so.html">Cơ sở</a></li>
+      <li><a href="tinh-huong.html">Tình huống</a></li>
+      <li><a href="so-sanh.html">So sánh</a></li>
+      <li><a href="bien-doi.html">Biến đổi</a></li>
+      <li><a href="ket-luan.html">Kết luận</a></li>
+      <li><a href="ai-usage.html" class="active">AI Usage</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
+</nav>
+
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.93) 0%, rgba(15,31,61,.88) 55%, rgba(10,20,40,.93) 100%), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Trang chủ</a><span>/</span><span>Phụ lục AI Usage</span>
+      </div>
+      <h1 class="page-hero-title">Ứng dụng <span class="accent">AI</span><br/>có Trách nhiệm</h1>
+      <p class="page-hero-sub">Minh bạch về công cụ AI đã sử dụng, mục đích, phần sinh viên chỉnh sửa và cam kết liêm chính học thuật.</p>
+      <span class="page-hero-badge">Phụ lục · Minh bạch AI · Liêm chính học thuật</span>
+    </div>
+  </div>
+</div>
+
+<!-- CAM KẾT -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-label reveal">Cam kết của nhóm</div>
+    <h2 class="section-title reveal">Tuyên bố Liêm chính Học thuật</h2>
+    <div class="divider reveal"></div>
+    <div style="background:rgba(201,168,76,.08);border:2px solid rgba(201,168,76,.3);border-radius:var(--r2);padding:2.5rem;margin-bottom:2rem;" class="reveal">
+      <p style="color:#c8d6f0;font-size:1.05rem;line-height:1.9;">
+        Nhóm cam kết rằng:<br/><br/>
+        <strong style="color:var(--gold2);">1.</strong> Toàn bộ nội dung học thuật trong sản phẩm này được trích dẫn và kiểm chứng từ
+        <strong style="color:var(--gold2);">Giáo trình Chủ nghĩa Xã hội Khoa học (Bộ GD&amp;ĐT, 2021)</strong>,
+        Văn kiện Đại hội Đảng XIII, và các văn bản pháp luật chính thức.<br/><br/>
+        <strong style="color:var(--gold2);">2.</strong> AI (Claude — Anthropic) được sử dụng như <strong style="color:var(--gold2);">công cụ hỗ trợ</strong>
+        trong việc tổ chức cấu trúc, viết code HTML/CSS/JS, và trình bày trực quan — <strong style="color:#e74c3c;">KHÔNG</strong>
+        thay thế tư duy phân tích và lập luận của nhóm.<br/><br/>
+        <strong style="color:var(--gold2);">3.</strong> Mọi thông tin do AI sinh ra đều được nhóm <strong style="color:var(--gold2);">đối chiếu với giáo trình chính thống</strong>
+        trước khi đưa vào sản phẩm cuối cùng. Nhóm chịu trách nhiệm hoàn toàn về nội dung.<br/><br/>
+        <strong style="color:var(--gold2);">4.</strong> Sản phẩm này là kết quả của quá trình <strong style="color:var(--gold2);">hợp tác giữa con người và AI</strong>,
+        trong đó con người giữ vai trò chủ đạo về nội dung, AI hỗ trợ về kỹ thuật trình bày.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CÔNG CỤ AI ĐÃ SỬ DỤNG -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Công cụ &amp; Mục đích</div>
+    <h2 class="section-title reveal">Các công cụ AI đã sử dụng</h2>
+    <div class="divider reveal"></div>
+    <div class="cards-grid cards-grid--3 reveal">
+      <div class="card" style="border-top:4px solid var(--gold);">
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg></div>
+        <div class="card-title">Claude (Anthropic)</div>
+        <p class="card-text">
+          <strong>Mục đích:</strong> Hỗ trợ viết code HTML/CSS/JS, tổ chức cấu trúc nội dung,
+          gợi ý layout và thiết kế giao diện website.<br/><br/>
+          <strong>Phần nhóm chỉnh sửa:</strong> Kiểm tra nội dung học thuật, thay đổi bố cục,
+          chỉnh sửa văn phong, thêm/bớt nội dung theo ý nhóm, chọn ảnh minh họa.
+        </p>
+      </div>
+      <div class="card" style="border-top:4px solid #3498db;">
+        <div class="card-icon" style="background:rgba(52,152,219,.1);border-color:rgba(52,152,219,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <div class="card-title">Chart.js</div>
+        <p class="card-text">
+          <strong>Mục đích:</strong> Thư viện JavaScript mã nguồn mở để tạo biểu đồ trực quan
+          (polar area, bar, radar, line chart) minh họa dữ liệu và so sánh.<br/><br/>
+          <strong>Phần nhóm chỉnh sửa:</strong> Chọn loại biểu đồ phù hợp, nhập dữ liệu từ giáo trình,
+          chỉnh màu sắc và nhãn cho phù hợp nội dung.
+        </p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--green);">
+        <div class="card-icon" style="background:rgba(26,122,74,.1);border-color:rgba(26,122,74,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg></div>
+        <div class="card-title">Unsplash</div>
+        <p class="card-text">
+          <strong>Mục đích:</strong> Nguồn ảnh miễn phí bản quyền (Creative Commons) để minh họa
+          nội dung về gia đình, văn hóa Việt Nam, đời sống hiện đại.<br/><br/>
+          <strong>Phần nhóm chỉnh sửa:</strong> Tìm kiếm và chọn lọc ảnh phù hợp với từng chủ đề,
+          đảm bảo ảnh không vi phạm bản quyền.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI LÀM GÌ vs SINH VIÊN LÀM GÌ -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-label reveal">Phân định rõ ràng</div>
+    <h2 class="section-title reveal">AI hỗ trợ gì? Sinh viên làm gì?</h2>
+    <div class="divider reveal"></div>
+    <div class="case-split reveal">
+      <div class="case-side case-side--b">
+        <div class="case-side-head">
+          <div class="case-side-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="case-side-name">Nhóm sinh viên</div>
+            <span class="tag tag--green">Chủ đạo &amp; Quyết định</span>
+          </div>
+        </div>
+        <div>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Đọc và hiểu giáo trình (tr.239–268)</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>Phân tích tình huống vợ chồng Lan</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>Đưa ra nhận định và lập trường nhóm</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Kiểm chứng nội dung AI với giáo trình</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21H17"/><path d="M12 3v18"/></svg>Quyết định cấu trúc và nội dung cuối cùng</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>Chọn ảnh minh họa phù hợp chủ đề</span>
+        </div>
+      </div>
+      <div class="case-side case-side--a">
+        <div class="case-side-head">
+          <div class="case-side-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg>
+          </div>
+          <div>
+            <div class="case-side-name">AI (Claude)</div>
+            <span class="tag tag--red">Hỗ trợ kỹ thuật</span>
+          </div>
+        </div>
+        <div>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Viết code HTML/CSS/JavaScript</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>Thiết kế layout và giao diện</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Tạo biểu đồ Chart.js</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>Tổ chức cấu trúc nội dung từ bản nháp</span>
+          <span class="case-value-chip"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/></svg>Chỉnh sửa văn phong trình bày</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMPTS MẪU -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-label reveal">Minh bạch quy trình</div>
+    <h2 class="section-title reveal">Một số Prompt đã sử dụng</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">
+      Dưới đây là một số prompt tiêu biểu mà nhóm đã sử dụng khi làm việc với AI.
+      Mỗi prompt đều được nhóm kiểm tra kết quả và chỉnh sửa trước khi sử dụng.
+    </p>
+
+    <div class="prompt-box reveal">
+      <p>"Tạo một trang web HTML trình bày nội dung Chương 7 giáo trình CNXHKH về Vấn đề Gia đình
+      trong Thời kỳ Quá độ lên CNXH. Nội dung gồm: khái niệm, vị trí, chức năng gia đình,
+      cơ sở xây dựng gia đình, và phân tích tình huống vợ chồng Lan."</p>
+      <div class="prompt-result">
+        <strong>Kết quả:</strong> AI tạo ra khung HTML cơ bản. Nhóm đã chỉnh sửa lại bố cục,
+        thêm/bớt nội dung, kiểm chứng từng đoạn với giáo trình trang 239–268.
+      </div>
+    </div>
+
+    <div class="prompt-box reveal">
+      <p>"Phân tích tình huống vợ chồng Lan chọn sống riêng. Trình bày hai góc nhìn:
+      bố mẹ chồng (truyền thống) và vợ chồng Lan (hiện đại). Đưa ra kết luận khoa học
+      dựa trên quan điểm Mác–Lênin."</p>
+      <div class="prompt-result">
+        <strong>Kết quả:</strong> AI gợi ý cấu trúc phân tích. Nhóm đã bổ sung thêm
+        dẫn chứng từ giáo trình, chỉnh sửa lập luận cho sát với yêu cầu assignment,
+        và thêm nhận định riêng của nhóm.
+      </div>
+    </div>
+
+    <div class="prompt-box reveal">
+      <p>"Tạo biểu đồ so sánh gia đình truyền thống và gia đình hạt nhân theo 6 tiêu chí:
+      gắn kết huyết thống, tự lập cá nhân, hỗ trợ kinh tế, bảo tồn văn hóa,
+      bình đẳng giới, thích nghi đô thị."</p>
+      <div class="prompt-result">
+        <strong>Kết quả:</strong> AI tạo code Chart.js. Nhóm đã điều chỉnh số liệu
+        cho phù hợp với nhận định từ giáo trình và thực tiễn Việt Nam.
+      </div>
+    </div>
+
+    <div class="prompt-box reveal">
+      <p>"Cải thiện giao diện website: thêm tính tương tác (quiz, accordion, flip card),
+      thêm ảnh minh họa về gia đình Việt Nam, làm cho giao diện chuyên nghiệp hơn."</p>
+      <div class="prompt-result">
+        <strong>Kết quả:</strong> AI viết thêm code cho các component tương tác.
+        Nhóm chọn lọc và chỉnh sửa nội dung câu hỏi quiz, chọn ảnh minh họa phù hợp.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NGUYÊN TẮC SỬ DỤNG AI -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Nguyên tắc</div>
+    <h2 class="section-title reveal">6 Nguyên tắc sử dụng AI của nhóm</h2>
+    <div class="divider reveal"></div>
+    <div class="cards-grid cards-grid--2 reveal">
+      <div class="card" style="border-left:4px solid var(--gold);">
+        <div class="card-title">1. AI là công cụ, không phải tác giả</div>
+        <p class="card-text">AI hỗ trợ kỹ thuật (code, layout, định dạng) — nhóm giữ quyền quyết định về nội dung, lập luận và kết luận học thuật.</p>
+      </div>
+      <div class="card" style="border-left:4px solid #3498db;">
+        <div class="card-title">2. Kiểm chứng mọi thông tin</div>
+        <p class="card-text">Mọi nội dung AI sinh ra đều được đối chiếu với giáo trình CNXHKH (2021) và các nguồn chính thống trước khi sử dụng.</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--green);">
+        <div class="card-title">3. Minh bạch quy trình</div>
+        <p class="card-text">Nhóm ghi lại công cụ, mục đích sử dụng, và phân biệt rõ AI hỗ trợ gì vs sinh viên làm gì (trang này).</p>
+      </div>
+      <div class="card" style="border-left:4px solid #9b59b6;">
+        <div class="card-title">4. Không giả mạo trích dẫn</div>
+        <p class="card-text">Mọi trích dẫn trong sản phẩm đều từ nguồn thật (giáo trình, văn kiện, luật). AI không được phép tạo ra trích dẫn giả.</p>
+      </div>
+      <div class="card" style="border-left:4px solid #e67e22;">
+        <div class="card-title">5. Sáng tạo có trách nhiệm</div>
+        <p class="card-text">AI chỉ đóng vai trò hỗ trợ (tạo sơ đồ, quiz, biểu đồ, code...) — không thay thế toàn bộ sản phẩm sáng tạo.</p>
+      </div>
+      <div class="card" style="border-left:4px solid #16a085;">
+        <div class="card-title">6. Nhận thức hạn chế của AI</div>
+        <p class="card-text">AI không thể thay thế tư duy phản biện, không hiểu sâu sắc bối cảnh văn hóa Việt Nam, và có thể sai — cần con người kiểm tra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-nav-bar">
+  <div class="page-nav-inner">
+    <a href="ket-luan.html" class="page-nav-btn">&larr; Kết luận</a>
+    <div class="page-nav-center"><strong>Phụ lục</strong>Ứng dụng AI có Trách nhiệm</div>
+    <a href="index.html" class="page-nav-btn">Trang chủ &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="footer-title">MLN131 — Chủ nghĩa Xã hội Khoa học</p>
+    <p>Chương 7: Vấn đề Gia đình trong Thời kỳ Quá độ lên Chủ nghĩa Xã hội</p>
+    <p style="margin-top:.4rem;">FPT University · Sản phẩm sáng tạo · 2026</p>
+  </div>
+</footer>
+
+<script>
+  const np = document.getElementById('navProgress');
+  window.addEventListener('scroll', () => {
+    np.style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+  });
+  document.querySelectorAll('.reveal').forEach(el => {
+    new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
+  });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
+</script>
+</body>
+</html>
