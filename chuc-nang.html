@@ -13,7 +13,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html" class="active">Chức năng</a></li>
       <li><a href="co-so.html">Cơ sở</a></li>
@@ -22,11 +22,14 @@
       <li><a href="bien-doi.html">Biến đổi</a></li>
       <li><a href="ket-luan.html">Kết luận</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="nav-progress" id="navProgress"></div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1541976844346-f18aeac57b06?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-breadcrumb">
@@ -109,6 +112,14 @@
   </div>
 </section>
 
+<!-- EDITORIAL PHOTO BREAK -->
+<div style="height:270px;background:linear-gradient(to right,rgba(10,20,40,.87) 0%,rgba(10,20,40,.55) 50%,rgba(10,20,40,.82) 100%),url('https://images.unsplash.com/photo-1581579186913-45ac24ad5d50?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:700;color:#fff;max-width:600px;line-height:1.55;font-style:italic;">"Không có gia đình lành mạnh, không có xã hội lành mạnh. Bốn chức năng gia đình là trụ cột của tiến bộ xã hội."</p>
+    <p style="margin-top:.85rem;font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Chức năng Gia đình · Chương 7 · MLN131</p>
+  </div>
+</div>
+
 <!-- BIỂU ĐỒ -->
 <section class="section section--gray">
   <div class="container">
@@ -147,7 +158,7 @@
     </p>
     <div class="cards-grid cards-grid--3 reveal">
       <div class="card card--dark">
-        <div class="card-icon">⚗️</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31L5.5 18a2 2 0 0 0 1.64 3.14h9.72A2 2 0 0 0 18.5 18L14 9.31V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg></div>
         <div class="card-title">Chức năng Kinh tế</div>
         <p class="card-text">
           Được "xã hội hóa" mạnh mẽ — nhiều hoạt động kinh tế gia đình chuyển sang thị
@@ -156,7 +167,7 @@
         </p>
       </div>
       <div class="card card--dark">
-        <div class="card-icon">🎓</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
         <div class="card-title">Chức năng Giáo dục</div>
         <p class="card-text">
           Được chia sẻ với nhà trường, trung tâm, và môi trường xã hội. Nhưng gia đình
@@ -165,7 +176,7 @@
         </p>
       </div>
       <div class="card card--dark">
-        <div class="card-icon">💖</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <div class="card-title">Chức năng Tình cảm</div>
         <p class="card-text">
           Ngày càng được đề cao trong xã hội hiện đại — đặc biệt khi con người chịu
@@ -176,8 +187,9 @@
     </div>
 
     <div style="margin-top:2.5rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--r2);padding:2rem;" class="reveal">
-      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;">
-        🎯 Kết luận về Chức năng gia đình
+      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:8px;">
+        <span style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;"></span>
+        Kết luận về Chức năng gia đình
       </h3>
       <p style="color:#a8b8d8;font-size:.95rem;line-height:1.8;">
         Bốn chức năng cơ bản của gia đình không tự nhiên mất đi trong thời kỳ quá độ.
@@ -251,6 +263,20 @@
       }
     }
   });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
 </script>
 </body>
 </html>

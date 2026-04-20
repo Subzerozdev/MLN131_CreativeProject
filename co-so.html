@@ -12,7 +12,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html">Chức năng</a></li>
       <li><a href="co-so.html" class="active">Cơ sở</a></li>
@@ -21,11 +21,14 @@
       <li><a href="bien-doi.html">Biến đổi</a></li>
       <li><a href="ket-luan.html">Kết luận</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="nav-progress" id="navProgress"></div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-breadcrumb">
@@ -55,7 +58,7 @@
     <div class="cards-grid cards-grid--2 reveal">
       <div class="pillar">
         <div class="pillar-top">
-          <div class="pillar-ico">⚙️</div>
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <span class="pillar-label">Cơ sở 1 · Nền tảng vật chất</span>
         </div>
         <div class="pillar-title">Kinh tế – Xã hội</div>
@@ -69,7 +72,7 @@
       </div>
       <div class="pillar">
         <div class="pillar-top">
-          <div class="pillar-ico">⚖️</div>
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21H17"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
           <span class="pillar-label">Cơ sở 2 · Nền tảng pháp lý</span>
         </div>
         <div class="pillar-title">Chính trị – Pháp lý</div>
@@ -83,7 +86,7 @@
       </div>
       <div class="pillar">
         <div class="pillar-top">
-          <div class="pillar-ico">🎓</div>
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
           <span class="pillar-label">Cơ sở 3 · Nền tảng tinh thần</span>
         </div>
         <div class="pillar-title">Văn hóa – Tư tưởng</div>
@@ -97,7 +100,7 @@
       </div>
       <div class="pillar">
         <div class="pillar-top">
-          <div class="pillar-ico">💍</div>
+          <div class="pillar-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <span class="pillar-label">Cơ sở 4 · Nền tảng hôn nhân</span>
         </div>
         <div class="pillar-title">Hôn nhân Tiến bộ</div>
@@ -112,6 +115,14 @@
     </div>
   </div>
 </section>
+
+<!-- EDITORIAL PHOTO BREAK -->
+<div style="height:270px;background:linear-gradient(to right,rgba(10,20,40,.88) 0%,rgba(10,20,40,.58) 45%,rgba(10,20,40,.83) 100%),url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb?w=1400&auto=format&fit=crop&q=70') center 30%/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:700;color:#fff;max-width:600px;line-height:1.55;font-style:italic;">"Hôn nhân tiến bộ không chỉ là quyền lợi — đó là nền tảng pháp lý–tình cảm cho sự phát triển bền vững của gia đình."</p>
+    <p style="margin-top:.85rem;font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Cơ sở Xây dựng Gia đình · Chương 7 · MLN131</p>
+  </div>
+</div>
 
 <!-- HÔN NHÂN TIẾN BỘ -->
 <section class="section section--dark">
@@ -138,7 +149,7 @@
 
     <div class="cards-grid cards-grid--3 reveal">
       <div class="card card--dark" style="border-top:3px solid var(--gold);">
-        <div class="card-icon">❤️</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
         <div class="card-title">Tình yêu là nền tảng</div>
         <p class="card-text">
           Hôn nhân XHCN dựa trên tình yêu tự nguyện, không bị mua bán, không phụ thuộc vào
@@ -147,7 +158,7 @@
         </p>
       </div>
       <div class="card card--dark" style="border-top:3px solid #3498db;">
-        <div class="card-icon">⚖️</div>
+        <div class="card-icon" style="background:rgba(52,152,219,.1);border-color:rgba(52,152,219,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21H17"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
         <div class="card-title">Bình đẳng giới thực chất</div>
         <p class="card-text">
           Không chỉ bình đẳng trên giấy tờ — mà bình đẳng trong thực tế: phân chia công việc
@@ -155,7 +166,7 @@
         </p>
       </div>
       <div class="card card--dark" style="border-top:3px solid var(--green);">
-        <div class="card-icon">🛡️</div>
+        <div class="card-icon" style="background:rgba(26,122,74,.1);border-color:rgba(26,122,74,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <div class="card-title">Bảo vệ người yếu thế</div>
         <p class="card-text">
           Nhà nước XHCN có trách nhiệm bảo vệ phụ nữ, trẻ em và người già khỏi bạo lực,
@@ -243,6 +254,20 @@
   document.querySelectorAll('.reveal').forEach(el => {
     new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
   });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
 </script>
 </body>
 </html>

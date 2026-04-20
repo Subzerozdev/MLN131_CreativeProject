@@ -13,7 +13,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html">Chức năng</a></li>
       <li><a href="co-so.html">Cơ sở</a></li>
@@ -22,11 +22,14 @@
       <li><a href="bien-doi.html">Biến đổi</a></li>
       <li><a href="ket-luan.html">Kết luận</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="nav-progress" id="navProgress"></div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-breadcrumb">
@@ -53,7 +56,7 @@
     <div class="cards-grid cards-grid--2 reveal">
       <div style="background:rgba(192,57,43,.04);border:2px solid rgba(192,57,43,.2);border-radius:var(--r2);padding:2rem;">
         <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
-          <div style="font-size:2rem;">🏘️</div>
+          <div style="width:40px;height:40px;border-radius:var(--r);background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.25);display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9 12 3l9 6"/><path d="M9 21V9h6v12"/></svg></div>
           <div>
             <div style="font-weight:800;font-size:1.1rem;">Gia đình Truyền thống</div>
             <div style="font-size:.8rem;color:var(--muted);">Đại gia đình · Nhiều thế hệ</div>
@@ -71,7 +74,7 @@
       </div>
       <div style="background:rgba(26,122,74,.04);border:2px solid rgba(26,122,74,.2);border-radius:var(--r2);padding:2rem;">
         <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
-          <div style="font-size:2rem;">🏠</div>
+          <div style="width:40px;height:40px;border-radius:var(--r);background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.25);display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div>
             <div style="font-weight:800;font-size:1.1rem;">Gia đình Hạt nhân</div>
             <div style="font-size:.8rem;color:var(--muted);">2 thế hệ · Vợ chồng & con cái</div>
@@ -91,6 +94,14 @@
   </div>
 </section>
 
+<!-- EDITORIAL PHOTO BREAK -->
+<div style="height:270px;background:linear-gradient(to right,rgba(10,20,40,.87) 0%,rgba(10,20,40,.55) 50%,rgba(10,20,40,.83) 100%),url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:700;color:#fff;max-width:600px;line-height:1.55;font-style:italic;">"Truyền thống hay hạt nhân — điều quan trọng không phải là hình thức, mà là giá trị con người đặt vào trong gia đình."</p>
+    <p style="margin-top:.85rem;font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">So sánh Hai mô hình · Chương 7 · MLN131</p>
+  </div>
+</div>
+
 <!-- BẢNG SO SÁNH -->
 <section class="section section--gray">
   <div class="container">
@@ -102,8 +113,8 @@
         <thead>
           <tr>
             <th>Tiêu chí</th>
-            <th>🏘️ Gia đình Truyền thống</th>
-            <th>🏠 Gia đình Hạt nhân</th>
+            <th>Gia đình Truyền thống</th>
+            <th>Gia đình Hạt nhân</th>
           </tr>
         </thead>
         <tbody>
@@ -215,7 +226,7 @@
         </p>
       </div>
       <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:var(--r2);padding:1.75rem;">
-        <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;">💡 Mô hình lý tưởng cho VN</h3>
+        <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;"></span>Mô hình lý tưởng cho VN</h3>
         <ul style="padding-left:1.1rem;">
           <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.6rem;line-height:1.6;"><strong style="color:var(--gold2);">Cấu trúc:</strong> Gia đình hạt nhân — sống riêng, tự lập</li>
           <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.6rem;line-height:1.6;"><strong style="color:var(--gold2);">Tinh thần:</strong> Truyền thống — hiếu thảo, gắn kết, thường xuyên thăm hỏi</li>
@@ -257,8 +268,8 @@
     data:{
       labels:['Gắn kết huyết thống','Tự lập cá nhân','Hỗ trợ kinh tế','Bảo tồn văn hóa','Bình đẳng giới','Thích nghi đô thị'],
       datasets:[
-        {label:'🏘️ Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,3.5],backgroundColor:'rgba(192,57,43,.15)',borderColor:'rgba(192,57,43,.8)',borderWidth:2,pointBackgroundColor:'rgba(192,57,43,.8)',pointRadius:5},
-        {label:'🏠 Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,9.2],backgroundColor:'rgba(26,122,74,.15)',borderColor:'rgba(26,122,74,.8)',borderWidth:2,pointBackgroundColor:'rgba(26,122,74,.8)',pointRadius:5}
+        {label:'Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,3.5],backgroundColor:'rgba(192,57,43,.15)',borderColor:'rgba(192,57,43,.8)',borderWidth:2,pointBackgroundColor:'rgba(192,57,43,.8)',pointRadius:5},
+        {label:'Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,9.2],backgroundColor:'rgba(26,122,74,.15)',borderColor:'rgba(26,122,74,.8)',borderWidth:2,pointBackgroundColor:'rgba(26,122,74,.8)',pointRadius:5}
       ]
     },
     options:{
@@ -292,8 +303,8 @@
     data:{
       labels:['Gắn kết\nhuyết thống','Tự lập\ncá nhân','Hỗ trợ\nkinh tế','Bảo tồn\nvăn hóa','Bình đẳng\ngiới','Giáo dục\ncon cái','Thích nghi\nđô thị'],
       datasets:[
-        {label:'🏘️ Gia đình Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,8.2,3.5],backgroundColor:'rgba(192,57,43,.65)',borderColor:'rgba(192,57,43,1)',borderWidth:1.5,borderRadius:6},
-        {label:'🏠 Gia đình Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,7.5,9.2],backgroundColor:'rgba(26,122,74,.65)',borderColor:'rgba(26,122,74,1)',borderWidth:1.5,borderRadius:6}
+        {label:'Gia đình Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,8.2,3.5],backgroundColor:'rgba(192,57,43,.65)',borderColor:'rgba(192,57,43,1)',borderWidth:1.5,borderRadius:6},
+        {label:'Gia đình Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,7.5,9.2],backgroundColor:'rgba(26,122,74,.65)',borderColor:'rgba(26,122,74,1)',borderWidth:1.5,borderRadius:6}
       ]
     },
     options:{
@@ -305,6 +316,20 @@
       }
     }
   });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
 </script>
 </body>
 </html>

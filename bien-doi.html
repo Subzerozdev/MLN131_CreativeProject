@@ -13,7 +13,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html">Chức năng</a></li>
       <li><a href="co-so.html">Cơ sở</a></li>
@@ -22,11 +22,14 @@
       <li><a href="bien-doi.html" class="active">Biến đổi</a></li>
       <li><a href="ket-luan.html">Kết luận</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="nav-progress" id="navProgress"></div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-breadcrumb">
@@ -136,6 +139,14 @@
   </div>
 </section>
 
+<!-- EDITORIAL PHOTO BREAK -->
+<div style="height:280px;background:linear-gradient(to right,rgba(10,20,40,.85) 0%,rgba(10,20,40,.55) 50%,rgba(10,20,40,.8) 100%),url('https://images.unsplash.com/photo-1461696114087-397271a499a3?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:700;color:#fff;max-width:580px;line-height:1.55;font-style:italic;">"Đô thị hóa và công nghiệp hóa không phá vỡ gia đình — chúng định hình lại hình thức của gia đình."</p>
+    <p style="margin-top:.85rem;font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Mác–Lênin · Sự biến đổi của Gia đình Việt Nam</p>
+  </div>
+</div>
+
 <!-- BA LĨNH VỰC BIẾN ĐỔI -->
 <section class="section section--gray">
   <div class="container">
@@ -144,7 +155,7 @@
     <div class="divider reveal"></div>
     <div class="cards-grid cards-grid--3 reveal">
       <div class="card" style="border-top:4px solid var(--gold);">
-        <div style="font-size:2rem;margin-bottom:.75rem;">📐</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/><path d="m7.5 10.5 2 2"/><path d="m10.5 7.5 2 2"/><path d="m13.5 4.5 2 2"/><path d="m4.5 13.5 2 2"/></svg></div>
         <div class="card-title">1. Quy mô & Kết cấu</div>
         <p class="card-text" style="margin-bottom:1rem;">
           Xu hướng gia đình hạt nhân thay thế dần đại gia đình trên toàn quốc, đặc biệt tại các
@@ -158,7 +169,7 @@
         </ul>
       </div>
       <div class="card" style="border-top:4px solid #3498db;">
-        <div style="font-size:2rem;margin-bottom:.75rem;">⚡</div>
+        <div class="card-icon" style="background:rgba(52,152,219,.1);border-color:rgba(52,152,219,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="card-title">2. Thực hiện Chức năng</div>
         <p class="card-text" style="margin-bottom:1rem;">
           Các chức năng gia đình biến đổi hình thức thực hiện — không mất đi bản chất,
@@ -172,7 +183,7 @@
         </ul>
       </div>
       <div class="card" style="border-top:4px solid var(--green);">
-        <div style="font-size:2rem;margin-bottom:.75rem;">🤝</div>
+        <div class="card-icon" style="background:rgba(26,122,74,.1);border-color:rgba(26,122,74,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <div class="card-title">3. Quan hệ nội bộ</div>
         <p class="card-text" style="margin-bottom:1rem;">
           Quan hệ trong gia đình trở nên bình đẳng, dân chủ và tôn trọng cá nhân hơn —
@@ -197,7 +208,7 @@
     <div class="divider reveal"></div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;" class="reveal">
       <div class="opinion-card">
-        <div class="opinion-q">📌 Nhận định 1</div>
+        <div class="opinion-q">Nhận định 01</div>
         <div class="opinion-title">Gia đình hạt nhân là xu thế tất yếu — không phải suy thoái</div>
         <p class="opinion-body">
           Theo học thuyết Mác–Lênin, hình thức gia đình thay đổi theo trình độ phát triển của
@@ -207,7 +218,7 @@
         </p>
       </div>
       <div class="opinion-card">
-        <div class="opinion-q">📌 Nhận định 2</div>
+        <div class="opinion-q">Nhận định 02</div>
         <div class="opinion-title">Chức năng gia đình không mất đi — chỉ biến đổi hình thức</div>
         <p class="opinion-body">
           Chức năng nuôi dưỡng, giáo dục, tình cảm vẫn được thực hiện trong gia đình hạt nhân —
@@ -217,7 +228,7 @@
         </p>
       </div>
       <div class="opinion-card">
-        <div class="opinion-q">📌 Nhận định 3</div>
+        <div class="opinion-q">Nhận định 03</div>
         <div class="opinion-title">Mô hình lý tưởng: Hạt nhân về cấu trúc — Truyền thống về tinh thần</div>
         <p class="opinion-body">
           Nhóm cho rằng mô hình phù hợp nhất là gia đình hạt nhân về cấu trúc (sống riêng, tự lập)
@@ -228,22 +239,22 @@
     </div>
 
     <div style="margin-top:2.5rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--r2);padding:2rem;" class="reveal">
-      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1.25rem;">💡 Lời khuyên thực tiễn cho sinh viên FPT</h3>
+      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1.25rem;display:flex;align-items:center;gap:8px;"><span style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;"></span>Lời khuyên thực tiễn cho sinh viên FPT</h3>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
         <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
-          <div style="font-size:1.4rem;margin-bottom:.5rem;">📞</div>
+          <div style="margin-bottom:.6rem;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Sống xa nhưng luôn kết nối. Một cuộc gọi video mỗi tuần giá trị hơn sống chung mà không nói chuyện.</p>
         </div>
         <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
-          <div style="font-size:1.4rem;margin-bottom:.5rem;">⚖️</div>
+          <div style="margin-bottom:.6rem;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21H17"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div>
           <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Bình đẳng không có nghĩa là không tôn trọng thế hệ lớn — mà là tôn trọng có lý lẽ, không phụ thuộc mù quáng.</p>
         </div>
         <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
-          <div style="font-size:1.4rem;margin-bottom:.5rem;">🌱</div>
+          <div style="margin-bottom:.6rem;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 1 1.9 4.4c-1.8.1-3.3-.5-4.5-1.5"/></svg></div>
           <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Hôn nhân tiến bộ bắt đầu từ sự tự nguyện. Đừng để áp lực xã hội thay bạn quyết định.</p>
         </div>
         <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
-          <div style="font-size:1.4rem;margin-bottom:.5rem;">🏛️</div>
+          <div style="margin-bottom:.6rem;"><svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
           <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Kế thừa hiếu thảo và gắn kết truyền thống — tiếp thu bình đẳng và tự chủ hiện đại. Không bỏ bên nào.</p>
         </div>
       </div>
@@ -297,6 +308,20 @@
       }
     }
   });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
 </script>
 </body>
 </html>

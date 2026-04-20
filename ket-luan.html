@@ -12,7 +12,7 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="khai-niem.html">Khái niệm</a></li>
       <li><a href="chuc-nang.html">Chức năng</a></li>
       <li><a href="co-so.html">Cơ sở</a></li>
@@ -21,11 +21,14 @@
       <li><a href="bien-doi.html">Biến đổi</a></li>
       <li><a href="ket-luan.html" class="active">Kết luận</a></li>
     </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
   <div class="nav-progress" id="navProgress"></div>
 </nav>
 
-<div class="page-hero">
+<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
   <div class="container">
     <div class="page-hero-inner">
       <div class="page-breadcrumb">
@@ -43,7 +46,7 @@
   <div class="container">
     <div class="section-label reveal" style="text-align:center;">Tổng kết</div>
     <div class="conclusion-box reveal">
-      <div class="conclusion-icon">🏛️</div>
+      <div class="conclusion-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg></div>
       <h2 class="conclusion-title">Kết luận Chương 7</h2>
       <p class="conclusion-body">
         Gia đình là tế bào sống của xã hội — và như mọi tế bào, nó phải
@@ -123,6 +126,14 @@
   </div>
 </section>
 
+<!-- EDITORIAL PHOTO BREAK -->
+<div style="height:270px;background:linear-gradient(to right,rgba(10,20,40,.88) 0%,rgba(10,20,40,.58) 45%,rgba(10,20,40,.85) 100%),url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
+  <div class="container" style="position:relative;z-index:2;">
+    <p style="font-size:clamp(.9rem,2vw,1.4rem);font-weight:700;color:#fff;max-width:600px;line-height:1.55;font-style:italic;">"Xây dựng gia đình no ấm, tiến bộ, hạnh phúc là nền tảng để xây dựng đất nước phồn vinh, văn minh."</p>
+    <p style="margin-top:.85rem;font-size:.78rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Chính sách Đảng & Nhà nước · Văn kiện Đại hội XIII</p>
+  </div>
+</div>
+
 <!-- CHÍNH SÁCH ĐẢNG & NHÀ NƯỚC -->
 <section class="section section--navy2">
   <div class="container">
@@ -141,27 +152,27 @@
 
     <ul class="policy-list reveal">
       <li>
-        <div class="policy-icon">🎯</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <p class="policy-text"><strong>Tăng cường lãnh đạo của Đảng, quản lý của Nhà nước</strong> về công tác gia đình. Ban hành và thực thi Luật Hôn nhân và Gia đình, Luật Bình đẳng giới, Luật Phòng chống bạo lực gia đình một cách đồng bộ và hiệu quả.</p>
       </li>
       <li>
-        <div class="policy-icon">🤲</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
         <p class="policy-text"><strong>Phát huy vai trò các tổ chức chính trị – xã hội</strong> (Hội Phụ nữ, Đoàn Thanh niên, Hội Nông dân) trong tuyên truyền, giáo dục và hỗ trợ xây dựng gia đình văn hóa ở cơ sở.</p>
       </li>
       <li>
-        <div class="policy-icon">🌿</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
         <p class="policy-text"><strong>Kế thừa những giá trị tốt đẹp của gia đình truyền thống Việt Nam:</strong> lòng hiếu thảo, tình yêu thương, sự gắn kết huyết thống, truyền thống tôn sư trọng đạo, kính già yêu trẻ.</p>
       </li>
       <li>
-        <div class="policy-icon">🌏</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
         <p class="policy-text"><strong>Tiếp thu có chọn lọc tinh hoa nhân loại về gia đình:</strong> bình đẳng giới thực chất, quyền trẻ em, hôn nhân tự nguyện, không bạo lực gia đình — trong khuôn khổ pháp luật và đạo đức xã hội VN.</p>
       </li>
       <li>
-        <div class="policy-icon">📊</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
         <p class="policy-text"><strong>Xây dựng phong trào "Gia đình văn hóa"</strong> — hướng tới gia đình no ấm, bình đẳng, tiến bộ, hạnh phúc. Đây là mục tiêu cụ thể và thiết thực của chủ nghĩa xã hội tại Việt Nam trong giai đoạn hiện nay.</p>
       </li>
       <li>
-        <div class="policy-icon">🏫</div>
+        <div class="policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 8-4 8 4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M14 22v-4a2 2 0 0 0-4 0v4"/><circle cx="12" cy="9" r="2"/></svg></div>
         <p class="policy-text"><strong>Đưa giáo dục về gia đình vào hệ thống giáo dục quốc dân:</strong> giáo dục kỹ năng làm cha mẹ, kỹ năng xây dựng hôn nhân bền vững cho thế hệ trẻ — đặc biệt sinh viên đại học.</p>
       </li>
     </ul>
@@ -173,7 +184,7 @@
   <div class="container">
     <div class="cards-grid cards-grid--3 reveal">
       <div class="card card--dark">
-        <div class="card-icon">📚</div>
+        <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
         <div class="card-title">Tài liệu tham khảo</div>
         <p class="card-text" style="font-size:.85rem;line-height:1.85;">
           • Giáo trình CNXHKH — Bộ GD&ĐT (2021), tr. 239–268<br/>
@@ -185,7 +196,7 @@
         </p>
       </div>
       <div class="card card--dark">
-        <div class="card-icon">🎯</div>
+        <div class="card-icon" style="background:rgba(52,152,219,.1);border-color:rgba(52,152,219,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="#3498db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
         <div class="card-title">Mục tiêu học tập đạt được</div>
         <p class="card-text" style="font-size:.85rem;line-height:1.85;">
           <strong style="color:var(--gold2);">CLO7:</strong> Nắm quan điểm ML về gia đình trong TKQđ<br/>
@@ -195,7 +206,7 @@
         </p>
       </div>
       <div class="card card--dark">
-        <div class="card-icon">🤖</div>
+        <div class="card-icon" style="background:rgba(155,89,182,.1);border-color:rgba(155,89,182,.3);"><svg viewBox="0 0 24 24" fill="none" stroke="#9b59b6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M15 20v2M9 20v2M2 15h2M2 9h2M20 15h2M20 9h2"/></svg></div>
         <div class="card-title">Ứng dụng AI có trách nhiệm</div>
         <p class="card-text" style="font-size:.85rem;line-height:1.85;">
           Website này được xây dựng với sự hỗ trợ của AI (Claude) trong việc tổ chức cấu trúc
@@ -241,6 +252,20 @@
   document.querySelectorAll('.reveal').forEach(el => {
     new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
   });
+  const navToggle = document.getElementById('navToggle');
+  const navLinks  = document.getElementById('navLinks');
+  if(navToggle) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    document.addEventListener('click', e => {
+      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navToggle.classList.remove('open');
+        navLinks.classList.remove('open');
+      }
+    });
+  }
 </script>
 </body>
 </html>
