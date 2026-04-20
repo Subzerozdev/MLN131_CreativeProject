@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Biến đổi Gia đình VN · Chương 7 · MLN131</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
+    <ul class="nav-links">
+      <li><a href="khai-niem.html">Khái niệm</a></li>
+      <li><a href="chuc-nang.html">Chức năng</a></li>
+      <li><a href="co-so.html">Cơ sở</a></li>
+      <li><a href="tinh-huong.html">Tình huống</a></li>
+      <li><a href="so-sanh.html">So sánh</a></li>
+      <li><a href="bien-doi.html" class="active">Biến đổi</a></li>
+      <li><a href="ket-luan.html">Kết luận</a></li>
+    </ul>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Trang chủ</a><span>/</span><span>Chương 7 · Mục III</span>
+      </div>
+      <h1 class="page-hero-title">Sự <span class="accent">Biến đổi</span><br/>Gia đình Việt Nam</h1>
+      <p class="page-hero-sub">Gia đình Việt Nam đang thay đổi như thế nào trong thời kỳ quá độ? Timeline lịch sử, dữ liệu thực tiễn và nhận định của nhóm về xu thế tương lai.</p>
+      <span class="page-hero-badge">Chương 7 · Mục III · Trang 257–268</span>
+    </div>
+  </div>
+</div>
+
+<!-- THỐNG KÊ -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-label reveal">Dữ liệu thực tiễn</div>
+    <h2 class="section-title reveal">Gia đình Việt Nam qua con số</h2>
+    <div class="divider reveal"></div>
+    <div class="stats-row reveal">
+      <div class="stat-pill">
+        <div class="stat-num">~70%</div>
+        <div class="stat-label">Hộ gia đình hạt nhân tại đô thị VN hiện nay</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">3,6</div>
+        <div class="stat-label">Người/hộ gia đình trung bình (giảm từ 4,8 năm 1979)</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">27,2</div>
+        <div class="stat-label">Tuổi kết hôn trung bình lần đầu của phụ nữ VN (2019)</div>
+      </div>
+      <div class="stat-pill">
+        <div class="stat-num">2,09</div>
+        <div class="stat-label">Tổng tỷ suất sinh (TFR) VN — gần mức thay thế dân số</div>
+      </div>
+    </div>
+    <div class="chart-card reveal" style="background:var(--navy2);border:1px solid rgba(201,168,76,.2);">
+      <div class="chart-title" style="color:var(--white);">Biến đổi gia đình VN theo 3 lĩnh vực chính</div>
+      <div class="chart-sub">Mức độ biến đổi tương đối (thang điểm 10)</div>
+      <div class="chart-wrap">
+        <canvas id="chartChange"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Lịch sử biến đổi</div>
+    <h2 class="section-title reveal">Timeline: Gia đình Việt Nam từ 1945 đến nay</h2>
+    <div class="divider reveal"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;" class="reveal">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">Trước 1945</div>
+          <div class="tl-title">Gia đình phong kiến truyền thống</div>
+          <p class="tl-body">Đại gia đình nhiều thế hệ chiếm tuyệt đối. Phụ nữ chịu "tam tòng tứ đức" — không có quyền tự chủ hôn nhân. Quan hệ gia trưởng chi phối mọi quyết định. Hôn nhân do cha mẹ sắp đặt, không dựa trên tình yêu.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">1945 – 1954</div>
+          <div class="tl-title">Cách mạng Tháng Tám — Vị thế phụ nữ thay đổi</div>
+          <p class="tl-body">Phụ nữ tham gia kháng chiến, sản xuất — vị thế xã hội tăng lên đáng kể. Hiến pháp 1946 ghi nhận bình đẳng nam nữ. Đây là cơ sở pháp lý đầu tiên cho gia đình tiến bộ ở VN.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">1954 – 1975</div>
+          <div class="tl-title">Luật hóa hôn nhân tiến bộ</div>
+          <p class="tl-body">Luật Hôn nhân và Gia đình 1959: hôn nhân tự nguyện, bình đẳng nam nữ, một vợ một chồng — chính thức được luật hóa. Đây là bước tiến bộ vượt bậc so với chế độ phong kiến. Phụ nữ miền Bắc được học hành, làm việc bình đẳng.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">1975 – 1986</div>
+          <div class="tl-title">Thống nhất đất nước — Kinh tế bao cấp</div>
+          <p class="tl-body">Gia đình cả nước thống nhất dưới cùng hệ thống pháp lý. Kinh tế bao cấp — gia đình vẫn phụ thuộc vào hệ thống phân phối của Nhà nước. Gia đình hạt nhân bắt đầu xuất hiện ở đô thị.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">1986 – 2000</div>
+          <div class="tl-title">Đổi Mới — Gia đình hạt nhân bùng nổ</div>
+          <p class="tl-body">Kinh tế thị trường bùng nổ, đô thị hóa tăng nhanh. Gia đình hạt nhân trở thành mô hình phổ biến ở thành phố. Phụ nữ độc lập kinh tế ngày càng cao. Vai trò giới trong gia đình bắt đầu thay đổi đáng kể.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">2000 – 2010</div>
+          <div class="tl-title">Luật mới — Bảo vệ gia đình toàn diện</div>
+          <p class="tl-body">Luật HN&GĐ 2000, Luật Bình đẳng giới 2006, Luật Phòng chống bạo lực gia đình 2007. Hệ thống pháp luật bảo vệ gia đình hoàn thiện hơn. Nhận thức về bình đẳng giới và quyền trẻ em được nâng cao.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">2010 – 2020</div>
+          <div class="tl-title">Thời đại số — Gia đình đa dạng hóa</div>
+          <p class="tl-body">Gia đình hạt nhân chiếm đa số tại đô thị. Xuất hiện xu hướng mới: kết hôn muộn, sinh ít con, sống một mình. Thách thức mới: kết nối gia đình trong môi trường số, bảo tồn giá trị truyền thống.</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-era">2020 – nay</div>
+          <div class="tl-title">Hậu COVID — Gia đình tái định nghĩa</div>
+          <p class="tl-body">Đại dịch COVID-19 làm rõ tầm quan trọng của gia đình như nơi an toàn cuối cùng. Xu hướng làm việc từ xa thay đổi cấu trúc thời gian gia đình. Thế hệ Z bắt đầu đặt câu hỏi về mô hình hôn nhân và gia đình truyền thống.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BA LĨNH VỰC BIẾN ĐỔI -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-label reveal">Phân tích chi tiết</div>
+    <h2 class="section-title reveal">Biến đổi trong 3 lĩnh vực</h2>
+    <div class="divider reveal"></div>
+    <div class="cards-grid cards-grid--3 reveal">
+      <div class="card" style="border-top:4px solid var(--gold);">
+        <div style="font-size:2rem;margin-bottom:.75rem;">📐</div>
+        <div class="card-title">1. Quy mô & Kết cấu</div>
+        <p class="card-text" style="margin-bottom:1rem;">
+          Xu hướng gia đình hạt nhân thay thế dần đại gia đình trên toàn quốc, đặc biệt tại các
+          đô thị lớn. Quy mô hộ gia đình giảm từ 4,8 người (1979) xuống 3,6 người (2019).
+        </p>
+        <ul style="padding-left:1.1rem;font-size:.88rem;color:var(--muted);line-height:1.7;">
+          <li>Hộ đơn thân tăng mạnh ở TP.HCM, Hà Nội</li>
+          <li>Số con trung bình giảm từ 5-6 con (1960) xuống 2 con (2019)</li>
+          <li>Tuổi kết hôn ngày càng muộn hơn</li>
+          <li>Ly hôn tăng — phản ánh bình đẳng giới và quyền tự chủ</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid #3498db;">
+        <div style="font-size:2rem;margin-bottom:.75rem;">⚡</div>
+        <div class="card-title">2. Thực hiện Chức năng</div>
+        <p class="card-text" style="margin-bottom:1rem;">
+          Các chức năng gia đình biến đổi hình thức thực hiện — không mất đi bản chất,
+          mà được chia sẻ với các thiết chế xã hội khác.
+        </p>
+        <ul style="padding-left:1.1rem;font-size:.88rem;color:var(--muted);line-height:1.7;">
+          <li>Kinh tế: được "thị trường hóa" — gia đình mua dịch vụ thay vì tự làm</li>
+          <li>Giáo dục: chia sẻ với trường học, trung tâm</li>
+          <li>Tình cảm: ngày càng được ưu tiên và coi trọng hơn</li>
+          <li>Tái sản xuất: tỷ suất sinh giảm, nhưng chất lượng tăng</li>
+        </ul>
+      </div>
+      <div class="card" style="border-top:4px solid var(--green);">
+        <div style="font-size:2rem;margin-bottom:.75rem;">🤝</div>
+        <div class="card-title">3. Quan hệ nội bộ</div>
+        <p class="card-text" style="margin-bottom:1rem;">
+          Quan hệ trong gia đình trở nên bình đẳng, dân chủ và tôn trọng cá nhân hơn —
+          phản ánh sự tiến bộ về nhận thức và pháp lý.
+        </p>
+        <ul style="padding-left:1.1rem;font-size:.88rem;color:var(--muted);line-height:1.7;">
+          <li>Vợ chồng ngày càng bình đẳng trong ra quyết định</li>
+          <li>Cha mẹ dần tôn trọng quyền tự chủ của con cái</li>
+          <li>Bạo lực gia đình được xã hội lên án mạnh mẽ hơn</li>
+          <li>Trẻ em được bảo vệ tốt hơn, có quyền được lắng nghe</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NHẬN ĐỊNH NHÓM -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-label reveal">Câu hỏi 3 · Nhận định nhóm</div>
+    <h2 class="section-title reveal">Quan điểm và Lập trường</h2>
+    <div class="divider reveal"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;" class="reveal">
+      <div class="opinion-card">
+        <div class="opinion-q">📌 Nhận định 1</div>
+        <div class="opinion-title">Gia đình hạt nhân là xu thế tất yếu — không phải suy thoái</div>
+        <p class="opinion-body">
+          Theo học thuyết Mác–Lênin, hình thức gia đình thay đổi theo trình độ phát triển của
+          lực lượng sản xuất. Công nghiệp hóa → đô thị hóa → gia đình hạt nhân là chuỗi quy luật
+          khách quan đã diễn ra ở mọi nước phát triển. Đây là tiến bộ, không phải thụt lùi —
+          miễn là các chức năng cốt lõi của gia đình được duy trì.
+        </p>
+      </div>
+      <div class="opinion-card">
+        <div class="opinion-q">📌 Nhận định 2</div>
+        <div class="opinion-title">Chức năng gia đình không mất đi — chỉ biến đổi hình thức</div>
+        <p class="opinion-body">
+          Chức năng nuôi dưỡng, giáo dục, tình cảm vẫn được thực hiện trong gia đình hạt nhân —
+          thậm chí chuyên sâu hơn vì ít thành viên. Nguy hiểm chỉ đến khi gia đình hạt nhân
+          đứt gãy hoàn toàn khỏi mạng lưới huyết thống — đó là "nguyên tử hóa xã hội", không
+          phải tiến bộ.
+        </p>
+      </div>
+      <div class="opinion-card">
+        <div class="opinion-q">📌 Nhận định 3</div>
+        <div class="opinion-title">Mô hình lý tưởng: Hạt nhân về cấu trúc — Truyền thống về tinh thần</div>
+        <p class="opinion-body">
+          Nhóm cho rằng mô hình phù hợp nhất là gia đình hạt nhân về cấu trúc (sống riêng, tự lập)
+          nhưng duy trì tinh thần truyền thống: thường xuyên về thăm, phụng dưỡng cha mẹ, tham gia
+          lễ tết gia đình. Đây chính là tinh thần "vừa kế thừa vừa tiếp thu" mà Đảng ta chủ trương.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--r2);padding:2rem;" class="reveal">
+      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1.25rem;">💡 Lời khuyên thực tiễn cho sinh viên FPT</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+        <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
+          <div style="font-size:1.4rem;margin-bottom:.5rem;">📞</div>
+          <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Sống xa nhưng luôn kết nối. Một cuộc gọi video mỗi tuần giá trị hơn sống chung mà không nói chuyện.</p>
+        </div>
+        <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
+          <div style="font-size:1.4rem;margin-bottom:.5rem;">⚖️</div>
+          <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Bình đẳng không có nghĩa là không tôn trọng thế hệ lớn — mà là tôn trọng có lý lẽ, không phụ thuộc mù quáng.</p>
+        </div>
+        <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
+          <div style="font-size:1.4rem;margin-bottom:.5rem;">🌱</div>
+          <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Hôn nhân tiến bộ bắt đầu từ sự tự nguyện. Đừng để áp lực xã hội thay bạn quyết định.</p>
+        </div>
+        <div style="background:rgba(201,168,76,.06);border-radius:var(--r);padding:1.1rem;">
+          <div style="font-size:1.4rem;margin-bottom:.5rem;">🏛️</div>
+          <p style="font-size:.88rem;color:#c8d6f0;line-height:1.7;">Kế thừa hiếu thảo và gắn kết truyền thống — tiếp thu bình đẳng và tự chủ hiện đại. Không bỏ bên nào.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-nav-bar">
+  <div class="page-nav-inner">
+    <a href="so-sanh.html" class="page-nav-btn">← So sánh</a>
+    <div class="page-nav-center"><strong>Trang 6 / 7</strong>Biến đổi Gia đình Việt Nam</div>
+    <a href="ket-luan.html" class="page-nav-btn">Kết luận →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="footer-title">MLN131 — Chủ nghĩa Xã hội Khoa học</p>
+    <p>Chương 7: Vấn đề Gia đình trong Thời kỳ Quá độ lên Chủ nghĩa Xã hội</p>
+    <p style="margin-top:.4rem;">FPT University · Sản phẩm sáng tạo · 2026</p>
+  </div>
+</footer>
+
+<script>
+  const np = document.getElementById('navProgress');
+  window.addEventListener('scroll', () => {
+    np.style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+  });
+  document.querySelectorAll('.reveal').forEach(el => {
+    new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
+  });
+
+  new Chart(document.getElementById('chartChange'), {
+    type:'bar',
+    data:{
+      labels:['Quy mô & Kết cấu','Thực hiện Chức năng','Quan hệ nội bộ GĐ'],
+      datasets:[{
+        label:'Mức độ biến đổi (thang 10)',
+        data:[8.8,7.5,8.2],
+        backgroundColor:['rgba(201,168,76,.7)','rgba(52,152,219,.7)','rgba(155,89,182,.7)'],
+        borderColor:['rgba(201,168,76,1)','rgba(52,152,219,1)','rgba(155,89,182,1)'],
+        borderWidth:2, borderRadius:10
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false, indexAxis:'y',
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>` Mức độ: ${ctx.parsed.x}/10`}}},
+      scales:{
+        x:{min:0,max:10,ticks:{color:'#a8b8d8',font:{size:10}},grid:{color:'rgba(255,255,255,.07)'}},
+        y:{ticks:{color:'#a8b8d8',font:{size:11,family:'Be Vietnam Pro'}},grid:{display:false}}
+      }
+    }
+  });
+</script>
+</body>
+</html>

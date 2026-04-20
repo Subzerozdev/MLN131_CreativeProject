@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>So sánh Hai mô hình · Chương 7 · MLN131</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
+    <ul class="nav-links">
+      <li><a href="khai-niem.html">Khái niệm</a></li>
+      <li><a href="chuc-nang.html">Chức năng</a></li>
+      <li><a href="co-so.html">Cơ sở</a></li>
+      <li><a href="tinh-huong.html">Tình huống</a></li>
+      <li><a href="so-sanh.html" class="active">So sánh</a></li>
+      <li><a href="bien-doi.html">Biến đổi</a></li>
+      <li><a href="ket-luan.html">Kết luận</a></li>
+    </ul>
+  </div>
+  <div class="nav-progress" id="navProgress"></div>
+</nav>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Trang chủ</a><span>/</span><span>So sánh hai mô hình</span>
+      </div>
+      <h1 class="page-hero-title">Gia đình <span class="accent">Truyền thống</span><br/>vs Gia đình <span class="accent">Hạt nhân</span></h1>
+      <p class="page-hero-sub">So sánh toàn diện hai mô hình gia đình qua 10 tiêu chí, biểu đồ radar đa chiều và xu hướng thực tiễn tại Việt Nam.</p>
+      <span class="page-hero-badge">Phân tích so sánh · Biểu đồ & Dữ liệu thực tiễn</span>
+    </div>
+  </div>
+</div>
+
+<!-- OVERVIEW CARDS -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Tổng quan hai mô hình</div>
+    <h2 class="section-title reveal">Không có mô hình nào "hoàn hảo"</h2>
+    <div class="divider reveal"></div>
+    <p class="section-sub reveal">
+      Mỗi mô hình có điểm mạnh và hạn chế riêng — phù hợp với từng bối cảnh kinh tế, xã hội,
+      văn hóa nhất định. Phân tích dưới đây dựa trên lý luận Mác–Lênin và thực tiễn Việt Nam,
+      không phán xét theo cảm tính.
+    </p>
+    <div class="cards-grid cards-grid--2 reveal">
+      <div style="background:rgba(192,57,43,.04);border:2px solid rgba(192,57,43,.2);border-radius:var(--r2);padding:2rem;">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+          <div style="font-size:2rem;">🏘️</div>
+          <div>
+            <div style="font-weight:800;font-size:1.1rem;">Gia đình Truyền thống</div>
+            <div style="font-size:.8rem;color:var(--muted);">Đại gia đình · Nhiều thế hệ</div>
+          </div>
+        </div>
+        <p style="font-size:.92rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+          Mô hình gia đình chiếm ưu thế trong xã hội nông nghiệp. Nhiều thế hệ sống chung
+          (3–4 thế hệ), chia sẻ tài sản, lao động và trách nhiệm. Người lớn tuổi có tiếng nói quyết định.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+          <span class="tag tag--red">Gắn kết cao</span>
+          <span class="tag tag--red">Hỗ trợ kinh tế mạnh</span>
+          <span class="tag tag--red">Bảo tồn văn hóa tốt</span>
+        </div>
+      </div>
+      <div style="background:rgba(26,122,74,.04);border:2px solid rgba(26,122,74,.2);border-radius:var(--r2);padding:2rem;">
+        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+          <div style="font-size:2rem;">🏠</div>
+          <div>
+            <div style="font-weight:800;font-size:1.1rem;">Gia đình Hạt nhân</div>
+            <div style="font-size:.8rem;color:var(--muted);">2 thế hệ · Vợ chồng & con cái</div>
+          </div>
+        </div>
+        <p style="font-size:.92rem;color:var(--muted);line-height:1.75;margin-bottom:1rem;">
+          Mô hình gia đình phổ biến trong xã hội công nghiệp, đô thị. Chỉ gồm vợ, chồng và
+          con cái chưa trưởng thành. Các thành viên tự lập và có không gian cá nhân hơn.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+          <span class="tag tag--green">Tự lập cao</span>
+          <span class="tag tag--green">Ít xung đột</span>
+          <span class="tag tag--green">Bình đẳng giới tốt hơn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BẢNG SO SÁNH -->
+<section class="section section--gray">
+  <div class="container">
+    <div class="section-label reveal">Bảng phân tích chi tiết</div>
+    <h2 class="section-title reveal">So sánh 10 tiêu chí</h2>
+    <div class="divider reveal"></div>
+    <div style="overflow-x:auto;" class="reveal">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Tiêu chí</th>
+            <th>🏘️ Gia đình Truyền thống</th>
+            <th>🏠 Gia đình Hạt nhân</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Quy mô thành viên</td>
+            <td>Nhiều thế hệ (3–4), 8–15+ người</td>
+            <td>2 thế hệ (vợ, chồng, con), 3–5 người</td>
+          </tr>
+          <tr>
+            <td>Gắn kết huyết thống</td>
+            <td class="pro">✅ Rất chặt — đề cao hiếu thảo hàng ngày</td>
+            <td>⚠️ Linh hoạt — cần duy trì chủ động</td>
+          </tr>
+          <tr>
+            <td>Tự lập cá nhân</td>
+            <td class="con">⚠️ Bị ảnh hưởng bởi chuẩn mực tập thể</td>
+            <td class="pro">✅ Cao — vợ chồng tự quyết định cuộc sống</td>
+          </tr>
+          <tr>
+            <td>Hỗ trợ kinh tế nội bộ</td>
+            <td class="pro">✅ Mạnh — chia sẻ tài chính, lao động, đất đai</td>
+            <td class="con">⚠️ Yếu hơn — phụ thuộc thu nhập cá nhân</td>
+          </tr>
+          <tr>
+            <td>Bảo tồn văn hóa</td>
+            <td class="pro">✅ Rất tốt — truyền thống duy trì liên tục</td>
+            <td class="con">⚠️ Dễ mai một nếu không chủ động gìn giữ</td>
+          </tr>
+          <tr>
+            <td>Quản lý xung đột</td>
+            <td class="con">⚠️ Phức tạp — nhiều mối quan hệ, nhiều thế hệ</td>
+            <td class="pro">✅ Đơn giản hơn — ít người, ít mâu thuẫn thế hệ</td>
+          </tr>
+          <tr>
+            <td>Giáo dục con cái</td>
+            <td class="pro">✅ Ông bà tham gia sâu — truyền kinh nghiệm sống</td>
+            <td>Bố mẹ chủ đạo — chuyên sâu hơn nhưng ít kinh nghiệm</td>
+          </tr>
+          <tr>
+            <td>Phù hợp bối cảnh</td>
+            <td>Kinh tế nông nghiệp, cộng đồng làng xã</td>
+            <td class="pro">✅ Kinh tế công nghiệp, đô thị hóa, cơ động</td>
+          </tr>
+          <tr>
+            <td>Bình đẳng giới</td>
+            <td class="con">⚠️ Dễ duy trì vai trò giới cố định, bất bình đẳng</td>
+            <td class="pro">✅ Điều kiện tốt hơn cho bình đẳng thực chất</td>
+          </tr>
+          <tr>
+            <td>Chức năng tâm lý–tình cảm</td>
+            <td class="pro">✅ Luôn có người bên cạnh, ít cô đơn hơn</td>
+            <td class="con">⚠️ Nguy cơ cô lập nếu không duy trì quan hệ xã hội</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- BIỂU ĐỒ -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Trực quan hóa dữ liệu</div>
+    <h2 class="section-title reveal">Biểu đồ phân tích</h2>
+    <div class="divider reveal"></div>
+    <div class="cards-grid cards-grid--2 reveal">
+      <div class="chart-card">
+        <div class="chart-title">So sánh đa chiều: Truyền thống vs Hạt nhân</div>
+        <div class="chart-sub">Đánh giá theo 6 tiêu chí quan trọng nhất (thang điểm 10)</div>
+        <div class="chart-wrap" style="height:300px;">
+          <canvas id="chartRadar"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Xu hướng Gia đình Hạt nhân tại Việt Nam</div>
+        <div class="chart-sub">Tỷ lệ % các loại hộ gia đình qua các kỳ điều tra dân số</div>
+        <div class="chart-wrap" style="height:300px;">
+          <canvas id="chartTrend"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="chart-card reveal" style="margin-top:1.5rem;">
+      <div class="chart-title">Điểm mạnh và hạn chế theo từng tiêu chí</div>
+      <div class="chart-sub">So sánh điểm số trung bình của hai mô hình (thang 10)</div>
+      <div class="chart-wrap" style="height:260px;">
+        <canvas id="chartCompare"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NHẬN XÉT -->
+<section class="section section--dark">
+  <div class="container">
+    <div class="section-label reveal">Kết luận so sánh</div>
+    <h2 class="section-title reveal">Đâu là mô hình phù hợp<br/>cho Việt Nam hiện nay?</h2>
+    <div class="divider reveal"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;" class="reveal">
+      <div>
+        <p style="color:#a8b8d8;font-size:.95rem;line-height:1.85;margin-bottom:1.5rem;">
+          Căn cứ vào lý luận Mác–Lênin và thực tiễn Việt Nam, không có câu trả lời tuyệt đối.
+          Tuy nhiên, xu thế gia đình hạt nhân là <strong style="color:var(--gold2);">không thể đảo ngược</strong>
+          trong bối cảnh công nghiệp hóa, đô thị hóa mạnh mẽ hiện nay.
+        </p>
+        <p style="color:#a8b8d8;font-size:.95rem;line-height:1.85;">
+          Điều quan trọng hơn là làm thế nào để gia đình hạt nhân vẫn thực hiện đầy đủ các
+          chức năng cốt lõi và duy trì tinh thần gắn kết — dù không sống cùng mái nhà.
+        </p>
+      </div>
+      <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:var(--r2);padding:1.75rem;">
+        <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;">💡 Mô hình lý tưởng cho VN</h3>
+        <ul style="padding-left:1.1rem;">
+          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.6rem;line-height:1.6;"><strong style="color:var(--gold2);">Cấu trúc:</strong> Gia đình hạt nhân — sống riêng, tự lập</li>
+          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.6rem;line-height:1.6;"><strong style="color:var(--gold2);">Tinh thần:</strong> Truyền thống — hiếu thảo, gắn kết, thường xuyên thăm hỏi</li>
+          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.6rem;line-height:1.6;"><strong style="color:var(--gold2);">Quan hệ:</strong> Bình đẳng giữa vợ chồng, tôn trọng thế hệ lớn</li>
+          <li style="color:#a8b8d8;font-size:.9rem;line-height:1.6;"><strong style="color:var(--gold2);">Kết nối:</strong> Duy trì mạng lưới gia đình lớn qua lễ, tết, sinh nhật</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="page-nav-bar">
+  <div class="page-nav-inner">
+    <a href="tinh-huong.html" class="page-nav-btn">← Tình huống</a>
+    <div class="page-nav-center"><strong>Trang 5 / 7</strong>So sánh hai mô hình</div>
+    <a href="bien-doi.html" class="page-nav-btn">Biến đổi →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p class="footer-title">MLN131 — Chủ nghĩa Xã hội Khoa học</p>
+    <p>Chương 7: Vấn đề Gia đình trong Thời kỳ Quá độ lên Chủ nghĩa Xã hội</p>
+    <p style="margin-top:.4rem;">FPT University · Sản phẩm sáng tạo · 2026</p>
+  </div>
+</footer>
+
+<script>
+  const np = document.getElementById('navProgress');
+  window.addEventListener('scroll', () => {
+    np.style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
+  });
+  document.querySelectorAll('.reveal').forEach(el => {
+    new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
+  });
+
+  new Chart(document.getElementById('chartRadar'), {
+    type:'radar',
+    data:{
+      labels:['Gắn kết huyết thống','Tự lập cá nhân','Hỗ trợ kinh tế','Bảo tồn văn hóa','Bình đẳng giới','Thích nghi đô thị'],
+      datasets:[
+        {label:'🏘️ Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,3.5],backgroundColor:'rgba(192,57,43,.15)',borderColor:'rgba(192,57,43,.8)',borderWidth:2,pointBackgroundColor:'rgba(192,57,43,.8)',pointRadius:5},
+        {label:'🏠 Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,9.2],backgroundColor:'rgba(26,122,74,.15)',borderColor:'rgba(26,122,74,.8)',borderWidth:2,pointBackgroundColor:'rgba(26,122,74,.8)',pointRadius:5}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{family:'Be Vietnam Pro',size:11},color:'#6b7fa3',padding:16}}},
+      scales:{r:{min:0,max:10,ticks:{stepSize:2,color:'#9aa5c0',font:{size:9},backdropColor:'transparent'},grid:{color:'rgba(0,0,0,.07)'},pointLabels:{color:'#2d3748',font:{family:'Be Vietnam Pro',size:10,weight:'600'}}}}
+    }
+  });
+
+  new Chart(document.getElementById('chartTrend'), {
+    type:'line',
+    data:{
+      labels:['1979','1989','1999','2009','2019','2024*'],
+      datasets:[
+        {label:'Hạt nhân (%)',data:[28,35,46,57,66,70],borderColor:'#1a7a4a',backgroundColor:'rgba(26,122,74,.1)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#1a7a4a',fill:true,tension:.4},
+        {label:'Đại gia đình (%)',data:[72,65,54,43,34,30],borderColor:'#c0392b',backgroundColor:'rgba(192,57,43,.07)',borderWidth:2.5,pointRadius:5,pointBackgroundColor:'#c0392b',fill:true,tension:.4}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{family:'Be Vietnam Pro',size:11},color:'#6b7fa3',padding:16}},tooltip:{callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.parsed.y}%`}}},
+      scales:{
+        y:{min:0,max:100,ticks:{callback:v=>v+'%',color:'#9aa5c0',font:{size:10}},grid:{color:'rgba(0,0,0,.06)'}},
+        x:{ticks:{color:'#9aa5c0',font:{size:10}},grid:{display:false}}
+      }
+    }
+  });
+
+  new Chart(document.getElementById('chartCompare'), {
+    type:'bar',
+    data:{
+      labels:['Gắn kết\nhuyết thống','Tự lập\ncá nhân','Hỗ trợ\nkinh tế','Bảo tồn\nvăn hóa','Bình đẳng\ngiới','Giáo dục\ncon cái','Thích nghi\nđô thị'],
+      datasets:[
+        {label:'🏘️ Gia đình Truyền thống',data:[9.5,4.0,8.5,9.0,4.5,8.2,3.5],backgroundColor:'rgba(192,57,43,.65)',borderColor:'rgba(192,57,43,1)',borderWidth:1.5,borderRadius:6},
+        {label:'🏠 Gia đình Hạt nhân',data:[5.5,9.0,5.0,5.5,8.5,7.5,9.2],backgroundColor:'rgba(26,122,74,.65)',borderColor:'rgba(26,122,74,1)',borderWidth:1.5,borderRadius:6}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{font:{family:'Be Vietnam Pro',size:11},color:'#6b7fa3',padding:16}}},
+      scales:{
+        y:{min:0,max:10,ticks:{color:'#9aa5c0',font:{size:10}},grid:{color:'rgba(0,0,0,.06)'}},
+        x:{ticks:{color:'#9aa5c0',font:{size:10,family:'Be Vietnam Pro'}},grid:{display:false}}
+      }
+    }
+  });
+</script>
+</body>
+</html>
