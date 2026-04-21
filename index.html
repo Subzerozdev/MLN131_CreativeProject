@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ · Vấn đề Gia đình</title>
+  <title>Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</title>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* HERO - FULL IMPACT */
     #hero {
       min-height: 100vh;
       background: var(--navy);
@@ -63,8 +62,6 @@
     .hero-scroll { display: flex; align-items: center; gap: 10px; color: #a8b8d8; font-size: .82rem; font-weight: 500; margin-bottom: 2rem; }
     .scroll-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; display: inline-block; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.5;transform:scale(1.4);} }
-
-    /* OVERVIEW CARDS WITH IMAGES */
     .ov-card {
       background: var(--navy2); border: 1px solid rgba(201,168,76,.2);
       border-radius: var(--r2); overflow: hidden;
@@ -87,44 +84,10 @@
     .ov-card-title { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; }
     .ov-card-sub   { font-size: .88rem; color: #7a8fb0; line-height: 1.65; }
     .ov-card-link  { font-size: .82rem; color: var(--gold); font-weight: 600; margin-top: 1rem; display: block; }
-
-    /* IMAGE-TEXT INTERLEAVE BLOCKS */
-    .interleave {
-      display: grid; grid-template-columns: 1fr 1fr; min-height: 320px;
-    }
-    .interleave--reverse { direction: rtl; }
-    .interleave--reverse > * { direction: ltr; }
-    .interleave-img {
-      background-size: cover; background-position: center;
-      min-height: 320px; position: relative;
-    }
-    .interleave-img::after {
-      content: ''; position: absolute; inset: 0;
-      background: linear-gradient(90deg, rgba(10,20,40,.3) 0%, transparent 100%);
-    }
-    .interleave--reverse .interleave-img::after {
-      background: linear-gradient(-90deg, rgba(10,20,40,.3) 0%, transparent 100%);
-    }
-    .interleave-text {
-      background: var(--navy2); display: flex; align-items: center; padding: 2.5rem 3rem;
-    }
-    .interleave-label {
-      font-size: .72rem; font-weight: 700; letter-spacing: .18em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: .6rem;
-    }
-    .interleave-title {
-      font-size: clamp(.95rem,2vw,1.3rem); font-weight: 700;
-      color: #fff; line-height: 1.55; margin-bottom: 1rem;
-    }
-    .interleave-desc { font-size: .88rem; color: #8a9ab8; line-height: 1.7; }
-
     @media(max-width:768px) {
       .hero-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; }
       .hero-mosaic-img:nth-child(1) { grid-row: auto; }
       .hero-content { padding: 120px 0 60px; }
-      .interleave { grid-template-columns: 1fr; }
-      .interleave-img { min-height: 220px; }
-      .interleave--reverse { direction: ltr; }
     }
   </style>
 </head>
@@ -134,13 +97,9 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="khai-niem.html">Khái niệm</a></li>
-      <li><a href="chuc-nang.html">Chức năng</a></li>
-      <li><a href="co-so.html">Cơ sở</a></li>
-      <li><a href="tinh-huong.html">Tình huống</a></li>
-      <li><a href="so-sanh.html">So sánh</a></li>
-      <li><a href="bien-doi.html">Biến đổi</a></li>
-      <li><a href="ket-luan.html">Kết luận</a></li>
+      <li><a href="tinh-huong.html">1 · Phân tích</a></li>
+      <li><a href="khai-niem.html">2 · Lý luận</a></li>
+      <li><a href="so-sanh.html">3 · Nhận định</a></li>
       <li><a href="ai-usage.html">AI Usage</a></li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
@@ -152,7 +111,6 @@
 
 <!-- HERO -->
 <section id="hero">
-  <!-- Background mosaic -->
   <div class="hero-mosaic">
     <div class="hero-mosaic-img" style="background-image:url('https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
     <div class="hero-mosaic-img" style="background-image:url('https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
@@ -174,191 +132,126 @@
       lên Chủ nghĩa Xã hội
     </h1>
     <p class="hero-desc reveal">
-      Chương 7 phân tích gia đình dưới góc nhìn của chủ nghĩa Mác–Lênin: từ khái niệm,
-      chức năng đến những biến đổi sâu sắc trong thời kỳ quá độ — và bài toán đặt ra
-      cho gia đình Việt Nam hôm nay.
+      Phân tích tình huống vợ chồng Lan dưới góc nhìn Mác–Lênin: gia đình truyền thống
+      hay hạt nhân — xu thế tất yếu hay sự suy thoái?
     </p>
     <div class="hero-chips reveal">
       <span class="chip">Chương 7 · MLN131</span>
       <span class="chip">Mác–Lênin</span>
       <span class="chip">Gia đình hạt nhân</span>
       <span class="chip">Thời kỳ quá độ</span>
-      <span class="chip">Việt Nam</span>
     </div>
     <div class="hero-scroll reveal">
       <span class="scroll-dot"></span>
-      <span>7 trang nội dung + Quiz tương tác · Cuộn xuống để khám phá</span>
+      <span>3 ý phân tích + Quiz tương tác</span>
     </div>
-    <a href="khai-niem.html" class="hero-btn reveal">
+    <a href="tinh-huong.html" class="hero-btn reveal">
       Bắt đầu khám phá →
     </a>
   </div>
-
 </section>
 
-<!-- TỔNG QUAN: LÝ LUẬN NỀN TẢNG + ẢNH -->
+<!-- TÌNH HUỐNG DẪN NHẬP -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="section-label reveal">Tình huống dẫn nhập</div>
+    <h2 class="section-title reveal">Câu chuyện của Lan và chồng</h2>
+    <div class="divider reveal"></div>
+    <div class="scenario-box reveal">
+      <p class="scenario-text">
+        Sau khi cưới, <span class="scenario-highlight">vợ chồng Lan</span> chọn sống riêng thay vì ở cùng bố mẹ chồng.
+        <span class="scenario-highlight">Bố mẹ chồng buồn</span>, cho rằng con cái bất hiếu, bỏ rơi cha mẹ.
+        Lan và chồng lập luận rằng <span class="scenario-highlight">sống riêng giúp hai vợ chồng tự lập</span>,
+        tránh mâu thuẫn và vẫn thường xuyên về thăm.
+      </p>
+    </div>
+    <div style="margin-top:2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;" class="reveal">
+      <div class="scenario-q">
+        <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(192,57,43,.75);color:#fff;border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">1</span>Phân tích tình huống</strong>
+        <p>Mỗi bên đang bảo vệ giá trị gì? Có thực sự mâu thuẫn không?</p>
+      </div>
+      <div class="scenario-q">
+        <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(52,152,219,.75);color:#fff;border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">2</span>Căn cứ lý luận</strong>
+        <p>Gia đình hạt nhân thay thế truyền thống: quy luật tất yếu hay suy thoái?</p>
+      </div>
+      <div class="scenario-q">
+        <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(26,122,74,.75);color:#fff;border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">3</span>Nhận định nhóm</strong>
+        <p>Chọn mô hình nào? Làm sao vừa giữ truyền thống vừa thích nghi hiện đại?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Ý CHÍNH -->
 <section class="section section--dark">
   <div class="container">
-    <div class="section-label reveal">Tổng quan nội dung</div>
-    <h2 class="section-title reveal">Chương 7 gồm những gì?</h2>
+    <div class="section-label reveal">Nội dung phân tích</div>
+    <h2 class="section-title reveal">3 ý chính trả lời tình huống</h2>
     <div class="divider reveal"></div>
-    <p class="section-sub reveal">
-      Nội dung được tổ chức thành 7 trang, mỗi trang tương ứng với một chủ đề cụ thể —
-      từ lý luận nền tảng đến phân tích thực tiễn và kết luận.
-    </p>
-
-    <!-- Phần 1: Lý luận nền tảng -->
-    <div class="cards-grid cards-grid--3 reveal" style="margin-bottom:1.5rem;">
-      <a href="khai-niem.html" class="ov-card">
+    <div class="cards-grid cards-grid--3 reveal">
+      <a href="tinh-huong.html" class="ov-card">
         <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Đại gia đình Việt Nam"/>
+          <img class="ov-card-img" src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Phân tích tình huống"/>
         </div>
         <div class="ov-card-body">
           <div class="ov-card-num">01</div>
-          <div class="ov-card-title">Khái niệm & Vị trí</div>
-          <div class="ov-card-sub">Gia đình là gì? Ba vị trí của gia đình trong xã hội theo quan điểm Mác–Lênin.</div>
-          <span class="ov-card-link">Xem trang →</span>
+          <div class="ov-card-title">1 · Phân tích tình huống</div>
+          <div class="ov-card-sub">Giá trị bảo vệ ở mỗi bên và kết luận về mâu thuẫn.</div>
+          <span class="ov-card-link">Xem phân tích →</span>
         </div>
       </a>
-      <a href="chuc-nang.html" class="ov-card">
+      <a href="khai-niem.html" class="ov-card">
         <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình nuôi dưỡng"/>
+          <img class="ov-card-img" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=500&auto=format&fit=crop&q=70" alt="Căn cứ lý luận"/>
         </div>
         <div class="ov-card-body">
           <div class="ov-card-num">02</div>
-          <div class="ov-card-title">Chức năng Gia đình</div>
-          <div class="ov-card-sub">Bốn chức năng cơ bản: tái sản xuất, nuôi dưỡng, kinh tế và tâm lý–tình cảm.</div>
-          <span class="ov-card-link">Xem trang →</span>
-        </div>
-      </a>
-      <a href="co-so.html" class="ov-card">
-        <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=500&auto=format&fit=crop&q=70" alt="Tết Nguyên Đán — hôn nhân tiến bộ"/>
-        </div>
-        <div class="ov-card-body">
-          <div class="ov-card-num">03</div>
-          <div class="ov-card-title">Cơ sở Xây dựng GĐ</div>
-          <div class="ov-card-sub">Bốn trụ cột: kinh tế–xã hội, chính trị–pháp lý, văn hóa–tư tưởng và hôn nhân tiến bộ.</div>
-          <span class="ov-card-link">Xem trang →</span>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- XEN KẼ: Gia đình truyền thống -->
-<div class="interleave reveal">
-  <div class="interleave-img" style="background-image:url('https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
-  <div class="interleave-text">
-    <div>
-      <div class="interleave-label">Gia đình truyền thống</div>
-      <p class="interleave-title">Đại gia đình Việt Nam — nơi nhiều thế hệ sống chung dưới một mái nhà, chia sẻ tình thương và trách nhiệm.</p>
-      <p class="interleave-desc">Mô hình chiếm ưu thế trong xã hội nông nghiệp, nơi sự gắn kết huyết thống và hiếu thảo là giá trị cốt lõi.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Phần 2: Phân tích thực tiễn -->
-<section class="section section--dark" style="padding-top:60px;">
-  <div class="container">
-    <div class="cards-grid cards-grid--3 reveal" style="margin-bottom:1.5rem;">
-      <a href="tinh-huong.html" class="ov-card">
-        <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình đa thế hệ" style="object-position:top;"/>
-        </div>
-        <div class="ov-card-body">
-          <div class="ov-card-num">04</div>
-          <div class="ov-card-title">Phân tích Tình huống</div>
-          <div class="ov-card-sub">Câu chuyện vợ chồng Lan — hai góc nhìn, một vấn đề. Phân tích khoa học và kết luận.</div>
-          <span class="ov-card-link">Xem trang →</span>
+          <div class="ov-card-title">2 · Căn cứ lý luận</div>
+          <div class="ov-card-sub">Khái niệm gia đình, hạt nhân vs truyền thống, chức năng cơ bản.</div>
+          <span class="ov-card-link">Xem lý luận →</span>
         </div>
       </a>
       <a href="so-sanh.html" class="ov-card">
         <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&auto=format&fit=crop&q=70" alt="Nông thôn Việt Nam — gia đình truyền thống"/>
+          <img class="ov-card-img" src="https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Nhận định nhóm"/>
         </div>
         <div class="ov-card-body">
-          <div class="ov-card-num">05</div>
-          <div class="ov-card-title">So sánh hai mô hình</div>
-          <div class="ov-card-sub">Gia đình truyền thống vs gia đình hạt nhân — bảng so sánh 10 tiêu chí và biểu đồ.</div>
-          <span class="ov-card-link">Xem trang →</span>
-        </div>
-      </a>
-      <a href="bien-doi.html" class="ov-card">
-        <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=500" alt="TP.HCM — đô thị hóa"/>
-        </div>
-        <div class="ov-card-body">
-          <div class="ov-card-num">06</div>
-          <div class="ov-card-title">Biến đổi GĐ Việt Nam</div>
-          <div class="ov-card-sub">Timeline lịch sử biến đổi, thống kê thực tiễn và nhận định của nhóm.</div>
-          <span class="ov-card-link">Xem trang →</span>
+          <div class="ov-card-num">03</div>
+          <div class="ov-card-title">3 · Nhận định nhóm</div>
+          <div class="ov-card-sub">So sánh ưu khuyết, chọn mô hình và giải pháp thích nghi.</div>
+          <span class="ov-card-link">Xem nhận định →</span>
         </div>
       </a>
     </div>
-  </div>
-</section>
-
-<!-- XEN KẼ: Đô thị hóa (đảo chiều) -->
-<div class="interleave interleave--reverse reveal">
-  <div class="interleave-text">
-    <div>
-      <div class="interleave-label">Đô thị hóa & Gia đình hạt nhân</div>
-      <p class="interleave-title">TP. Hồ Chí Minh — nơi mô hình gia đình hạt nhân phát triển mạnh mẽ nhất cả nước.</p>
-      <p class="interleave-desc">Công nghiệp hóa, đô thị hóa thúc đẩy xu thế sống riêng, tự lập — một quy luật tất yếu khách quan.</p>
-    </div>
-  </div>
-  <div class="interleave-img" style="background-image:url('https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
-</div>
-
-<!-- Phần 3: Kết luận + Phụ lục -->
-<section class="section section--dark" style="padding-top:60px;">
-  <div class="container">
-    <div class="cards-grid cards-grid--3 reveal">
-      <a href="ket-luan.html" class="ov-card">
-        <div class="ov-card-img-wrap">
-          <img class="ov-card-img" src="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình Việt Nam hiện đại"/>
-        </div>
+    <div class="cards-grid cards-grid--2 reveal" style="margin-top:1.5rem;max-width:600px;margin-left:auto;margin-right:auto;">
+      <a href="#quiz" class="ov-card" style="border-color:rgba(26,122,74,.3);">
         <div class="ov-card-body">
-          <div class="ov-card-num">07</div>
-          <div class="ov-card-title">Kết luận & Chính sách</div>
-          <div class="ov-card-sub">Tổng kết lý luận, đường lối Đảng–Nhà nước và tài liệu tham khảo.</div>
-          <span class="ov-card-link">Xem trang →</span>
+          <div class="ov-card-num" style="color:var(--green);">?</div>
+          <div class="ov-card-title">Quiz · Trắc nghiệm</div>
+          <div class="ov-card-sub">5 câu hỏi kiểm tra kiến thức Chương 7.</div>
+          <span class="ov-card-link" style="color:var(--green);">Làm quiz →</span>
         </div>
       </a>
       <a href="ai-usage.html" class="ov-card" style="border-color:rgba(52,152,219,.3);">
         <div class="ov-card-body">
           <div class="ov-card-num" style="color:#3498db;">+</div>
           <div class="ov-card-title">AI Usage · Phụ lục</div>
-          <div class="ov-card-sub">Minh bạch công cụ AI, prompt đã dùng, cam kết liêm chính học thuật.</div>
+          <div class="ov-card-sub">Minh bạch công cụ AI và cam kết liêm chính.</div>
           <span class="ov-card-link" style="color:#3498db;">Xem phụ lục →</span>
-        </div>
-      </a>
-      <a href="#quiz" class="ov-card" style="border-color:rgba(26,122,74,.3);">
-        <div class="ov-card-body">
-          <div class="ov-card-num" style="color:var(--green);">?</div>
-          <div class="ov-card-title">Quiz · Trắc nghiệm</div>
-          <div class="ov-card-sub">Kiểm tra kiến thức Chương 7 với 5 câu hỏi trắc nghiệm tương tác.</div>
-          <span class="ov-card-link" style="color:var(--green);">Làm quiz →</span>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- QUIZ TƯƠNG TÁC -->
+<!-- QUIZ -->
 <section class="section section--gray" id="quiz">
   <div class="container">
     <div class="section-label reveal">Kiểm tra kiến thức</div>
     <h2 class="section-title reveal">Bạn hiểu Chương 7 đến đâu?</h2>
     <div class="divider reveal"></div>
-    <p class="section-sub reveal">
-      Trả lời 5 câu hỏi trắc nghiệm nhanh để kiểm tra mức độ hiểu về vấn đề gia đình
-      trong thời kỳ quá độ lên CNXH. Chọn đáp án và bấm "Kiểm tra" để xem kết quả.
-    </p>
 
     <div id="quizContainer" class="reveal">
-      <!-- Q1 -->
       <div class="quiz-question" data-correct="1">
         <div class="quiz-question-text">
           <span class="quiz-num">1</span>
@@ -371,8 +264,6 @@
           <label class="quiz-option"><span class="opt-letter">D</span><span>Quan hệ chính trị và giai cấp</span></label>
         </div>
       </div>
-
-      <!-- Q2 -->
       <div class="quiz-question" data-correct="2">
         <div class="quiz-question-text">
           <span class="quiz-num">2</span>
@@ -385,8 +276,6 @@
           <label class="quiz-option"><span class="opt-letter">D</span><span>5 chức năng bao gồm cả chức năng chính trị</span></label>
         </div>
       </div>
-
-      <!-- Q3 -->
       <div class="quiz-question" data-correct="1">
         <div class="quiz-question-text">
           <span class="quiz-num">3</span>
@@ -399,8 +288,6 @@
           <label class="quiz-option"><span class="opt-letter">D</span><span>Chỉ xảy ra ở các nước phát triển</span></label>
         </div>
       </div>
-
-      <!-- Q4 -->
       <div class="quiz-question" data-correct="3">
         <div class="quiz-question-text">
           <span class="quiz-num">4</span>
@@ -413,8 +300,6 @@
           <label class="quiz-option"><span class="opt-letter">D</span><span>Tự nguyện, bình đẳng, một vợ một chồng</span></label>
         </div>
       </div>
-
-      <!-- Q5 -->
       <div class="quiz-question" data-correct="2">
         <div class="quiz-question-text">
           <span class="quiz-num">5</span>
@@ -436,54 +321,6 @@
     <div class="quiz-score" id="quizScore">
       <div class="quiz-score-num" id="quizScoreNum"></div>
       <div class="quiz-score-label" id="quizScoreLabel"></div>
-    </div>
-  </div>
-</section>
-
-<!-- XEN KẼ: Trích dẫn + Ảnh Tết -->
-<div class="interleave reveal">
-  <div class="interleave-img" style="background-image:url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&auto=format&fit=crop&q=70')"></div>
-  <div class="interleave-text" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);">
-    <div>
-      <div class="interleave-label">Lời nhắn</div>
-      <p class="interleave-title" style="font-style:italic;">"Gia đình là nơi cuộc sống bắt đầu và tình yêu không bao giờ kết thúc — dù hình thức có thay đổi."</p>
-      <p class="interleave-desc" style="color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;">Chương 7 · Vấn đề Gia đình · MLN131</p>
-    </div>
-  </div>
-</div>
-
-<!-- TÌNH HUỐNG PREVIEW -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="section-label reveal">Tình huống dẫn nhập</div>
-    <h2 class="section-title reveal">Câu chuyện của Lan và chồng</h2>
-    <div class="divider reveal"></div>
-    <div class="scenario-box reveal">
-      <p class="scenario-text">
-        Sau khi cưới, <span class="scenario-highlight">vợ chồng Lan</span> chọn sống riêng thay vì ở cùng bố mẹ chồng.
-        <span class="scenario-highlight">Bố mẹ chồng buồn</span>, cho rằng con cái bất hiếu, bỏ rơi cha mẹ.
-        Lan và chồng lập luận rằng <span class="scenario-highlight">sống riêng giúp hai vợ chồng tự lập</span>,
-        tránh mâu thuẫn và vẫn thường xuyên về thăm.
-      </p>
-      <div class="scenario-questions">
-        <div class="scenario-q">
-          <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(201,168,76,.7);color:var(--navy);border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">1</span>Câu hỏi 1</strong>
-          <p>Mỗi bên đang bảo vệ giá trị gì? Họ có thực sự mâu thuẫn hay chỉ nhìn từ hai góc độ khác nhau?</p>
-        </div>
-        <div class="scenario-q">
-          <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(201,168,76,.7);color:var(--navy);border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">2</span>Câu hỏi 2</strong>
-          <p>Gia đình hạt nhân thay thế đại gia đình là quy luật tất yếu hay sự suy thoái? Các chức năng gia đình có bị ảnh hưởng?</p>
-        </div>
-        <div class="scenario-q">
-          <strong style="display:flex;align-items:center;gap:7px;"><span style="background:rgba(201,168,76,.7);color:var(--navy);border-radius:50%;width:18px;height:18px;min-width:18px;display:inline-flex;align-items:center;justify-content:center;font-size:.65rem;">3</span>Câu hỏi 3</strong>
-          <p>Làm thế nào để vừa giữ giá trị truyền thống vừa thích nghi với cuộc sống hiện đại?</p>
-        </div>
-      </div>
-    </div>
-    <div style="margin-top:2rem;text-align:center;" class="reveal">
-      <a href="tinh-huong.html" class="hero-btn" style="background:var(--navy);color:var(--gold);border:1px solid rgba(201,168,76,.4);">
-        Phân tích tình huống chi tiết →
-      </a>
     </div>
   </div>
 </section>
@@ -521,8 +358,6 @@
       }
     });
   }
-
-  // QUIZ
   document.querySelectorAll('.quiz-option').forEach(opt => {
     opt.addEventListener('click', function() {
       const siblings = this.closest('.quiz-options').querySelectorAll('.quiz-option');
@@ -545,11 +380,10 @@
       });
       if(selectedIdx === correct) score++;
     });
-    const scoreEl = document.getElementById('quizScore');
     document.getElementById('quizScoreNum').textContent = score + '/5';
     const msgs = ['Hãy xem lại nội dung nhé!','Cần ôn thêm một chút!','Khá tốt!','Giỏi lắm!','Xuất sắc! Bạn nắm vững Chương 7!'];
     document.getElementById('quizScoreLabel').textContent = msgs[score] || msgs[0];
-    scoreEl.classList.add('show');
+    document.getElementById('quizScore').classList.add('show');
     document.getElementById('quizCheck').style.display = 'none';
     document.getElementById('quizReset').style.display = 'inline-flex';
   }
