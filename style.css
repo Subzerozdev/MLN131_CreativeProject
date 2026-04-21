@@ -175,6 +175,9 @@ nav {
 .cards-grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .cards-grid--3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .cards-grid--4 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.cards-grid--4col { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .cards-grid--4col { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .cards-grid--4col { grid-template-columns: 1fr; } }
 
 .card {
   background: var(--white); border-radius: var(--r2);
@@ -328,6 +331,23 @@ nav {
 .compare-table td:first-child { font-weight: 700; color: var(--navy); font-size: .85rem; }
 .compare-table .pro { color: #1a7a4a; }
 .compare-table .con { color: #c0392b; }
+.compare-table .warn { color: #8a6d1b; }
+
+/* Professional status icons replacing emoji */
+.status-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 50%; margin-right: 8px;
+  font-size: 11px; font-weight: 700; flex-shrink: 0; vertical-align: middle;
+  position: relative; top: -1px;
+}
+.status-icon--good { background: #d4edda; color: #155724; border: 1.5px solid #28a745; }
+.status-icon--bad  { background: #f8d7da; color: #721c24; border: 1.5px solid #dc3545; }
+.status-icon--mid  { background: #fff3cd; color: #856404; border: 1.5px solid #daa520; }
+.status-icon--good::after { content: "\2713"; }
+.status-icon--bad::after  { content: "\2715"; }
+.status-icon--mid::after  { content: "!"; font-size: 12px; font-weight: 800; }
+.compare-table td .cell-content { display: flex; align-items: flex-start; gap: 0; }
+.compare-table td .cell-content .status-icon { margin-top: 2px; }
 
 /* ============================================================
    CHART CARDS
