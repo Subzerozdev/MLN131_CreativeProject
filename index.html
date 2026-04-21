@@ -7,38 +7,51 @@
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <style>
-    /* HERO */
+    /* HERO - FULL IMPACT */
     #hero {
       min-height: 100vh;
-      background: linear-gradient(135deg, rgba(10,20,40,.97) 0%, rgba(15,31,61,.93) 60%, rgba(10,20,40,.97) 100%),
-                  url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;
-      display: flex; align-items: center; position: relative; overflow: hidden;
+      background: var(--navy);
+      position: relative; overflow: hidden;
     }
-    .hero-bg::before {
-      content: ''; position: absolute; width: 700px; height: 700px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,.12) 0%, transparent 70%);
-      top: -200px; right: -200px;
+    .hero-mosaic {
+      position: absolute; inset: 0; z-index: 1;
+      display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr;
+      gap: 4px;
     }
-    .hero-bg::after {
-      content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,.07) 0%, transparent 70%);
-      bottom: -100px; left: -100px;
+    .hero-mosaic-img {
+      background-size: cover; background-position: center;
+      position: relative;
+    }
+    .hero-mosaic-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(10,20,40,.72);
+      transition: background .4s;
+    }
+    .hero-mosaic-img:hover::after { background: rgba(10,20,40,.55); }
+    .hero-mosaic-img:nth-child(1) { grid-row: 1 / 3; }
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(135deg, rgba(10,20,40,.88) 0%, rgba(15,31,61,.65) 50%, rgba(10,20,40,.88) 100%);
     }
     .hero-grid {
-      position: absolute; inset: 0;
+      position: absolute; inset: 0; z-index: 3;
       background-image:
-        linear-gradient(rgba(201,168,76,.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(201,168,76,.05) 1px, transparent 1px);
+        linear-gradient(rgba(201,168,76,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
-    .hero-content { position: relative; z-index: 2; padding: 120px 0 80px; }
+    .hero-content {
+      position: relative; z-index: 4;
+      padding: 140px 0 80px;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
     .hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 1.5rem; }
     .hero-line { width: 40px; height: 2px; background: var(--gold); }
     .hero-eyebrow span { font-size: .78rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
-    .hero-title { font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 1.25rem; }
+    .hero-title { font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 800; line-height: 1.1; color: var(--white); margin-bottom: 1.25rem; }
     .hero-title .accent { color: var(--gold); }
     .hero-desc { font-size: 1.1rem; color: #a8b8d8; max-width: 640px; margin-bottom: 2.5rem; line-height: 1.8; }
-    .hero-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 3rem; }
+    .hero-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 2.5rem; justify-content: center; }
     .chip { padding: .35rem 1rem; border-radius: 99px; border: 1px solid rgba(201,168,76,.35); font-size: .78rem; font-weight: 600; color: var(--gold2); background: rgba(201,168,76,.08); }
     .hero-btn {
       display: inline-flex; align-items: center; gap: .6rem;
@@ -47,24 +60,72 @@
       font-family: 'Be Vietnam Pro', sans-serif;
     }
     .hero-btn:hover { background: var(--gold2); transform: translateY(-2px); }
+    .hero-scroll { display: flex; align-items: center; gap: 10px; color: #a8b8d8; font-size: .82rem; font-weight: 500; margin-bottom: 2rem; }
+    .scroll-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; display: inline-block; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.5;transform:scale(1.4);} }
 
-    /* OVERVIEW CARDS */
+    /* OVERVIEW CARDS WITH IMAGES */
     .ov-card {
       background: var(--navy2); border: 1px solid rgba(201,168,76,.2);
-      border-radius: var(--r2); padding: 2rem;
+      border-radius: var(--r2); overflow: hidden;
       transition: transform .2s, box-shadow .2s;
       text-decoration: none; display: block;
     }
     .ov-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.3); }
+    .ov-card-img {
+      width: 100%; height: 140px; object-fit: cover; display: block;
+      transition: transform .4s;
+    }
+    .ov-card:hover .ov-card-img { transform: scale(1.05); }
+    .ov-card-img-wrap { overflow: hidden; position: relative; }
+    .ov-card-img-wrap::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
+      background: linear-gradient(transparent, var(--navy2));
+    }
+    .ov-card-body { padding: 1.25rem 1.75rem 1.75rem; }
     .ov-card-num { font-size: 2.5rem; font-weight: 800; color: var(--gold); opacity: .3; line-height: 1; margin-bottom: .5rem; }
     .ov-card-title { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: .5rem; }
     .ov-card-sub   { font-size: .88rem; color: #7a8fb0; line-height: 1.65; }
     .ov-card-link  { font-size: .82rem; color: var(--gold); font-weight: 600; margin-top: 1rem; display: block; }
 
-    /* PULSE DOT */
-    .scroll-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); animation: pulse 2s infinite; display: inline-block; }
-    .hero-scroll { display: flex; align-items: center; gap: 10px; color: #a8b8d8; font-size: .82rem; font-weight: 500; margin-bottom: 2rem; }
-    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1);} 50%{opacity:.5;transform:scale(1.4);} }
+    /* IMAGE-TEXT INTERLEAVE BLOCKS */
+    .interleave {
+      display: grid; grid-template-columns: 1fr 1fr; min-height: 320px;
+    }
+    .interleave--reverse { direction: rtl; }
+    .interleave--reverse > * { direction: ltr; }
+    .interleave-img {
+      background-size: cover; background-position: center;
+      min-height: 320px; position: relative;
+    }
+    .interleave-img::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(10,20,40,.3) 0%, transparent 100%);
+    }
+    .interleave--reverse .interleave-img::after {
+      background: linear-gradient(-90deg, rgba(10,20,40,.3) 0%, transparent 100%);
+    }
+    .interleave-text {
+      background: var(--navy2); display: flex; align-items: center; padding: 2.5rem 3rem;
+    }
+    .interleave-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: .6rem;
+    }
+    .interleave-title {
+      font-size: clamp(.95rem,2vw,1.3rem); font-weight: 700;
+      color: #fff; line-height: 1.55; margin-bottom: 1rem;
+    }
+    .interleave-desc { font-size: .88rem; color: #8a9ab8; line-height: 1.7; }
+
+    @media(max-width:768px) {
+      .hero-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; }
+      .hero-mosaic-img:nth-child(1) { grid-row: auto; }
+      .hero-content { padding: 120px 0 60px; }
+      .interleave { grid-template-columns: 1fr; }
+      .interleave-img { min-height: 220px; }
+      .interleave--reverse { direction: ltr; }
+    }
   </style>
 </head>
 <body>
@@ -91,8 +152,17 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <!-- Background mosaic -->
+  <div class="hero-mosaic">
+    <div class="hero-mosaic-img" style="background-image:url('https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+    <div class="hero-mosaic-img" style="background-image:url('https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+    <div class="hero-mosaic-img" style="background-image:url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&auto=format&fit=crop&q=70')"></div>
+    <div class="hero-mosaic-img" style="background-image:url('https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+    <div class="hero-mosaic-img" style="background-image:url('https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&auto=format&fit=crop&q=70')"></div>
+  </div>
+  <div class="hero-overlay"></div>
   <div class="hero-grid"></div>
+
   <div class="container hero-content">
     <div class="hero-eyebrow reveal">
       <div class="hero-line"></div>
@@ -123,9 +193,10 @@
       Bắt đầu khám phá →
     </a>
   </div>
+
 </section>
 
-<!-- TỔNG QUAN -->
+<!-- TỔNG QUAN: LÝ LUẬN NỀN TẢNG + ẢNH -->
 <section class="section section--dark">
   <div class="container">
     <div class="section-label reveal">Tổng quan nội dung</div>
@@ -136,64 +207,140 @@
       từ lý luận nền tảng đến phân tích thực tiễn và kết luận.
     </p>
 
+    <!-- Phần 1: Lý luận nền tảng -->
     <div class="cards-grid cards-grid--3 reveal" style="margin-bottom:1.5rem;">
       <a href="khai-niem.html" class="ov-card">
-        <div class="ov-card-num">01</div>
-        <div class="ov-card-title">Khái niệm & Vị trí</div>
-        <div class="ov-card-sub">Gia đình là gì? Ba vị trí của gia đình trong xã hội theo quan điểm Mác–Lênin.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Đại gia đình Việt Nam"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">01</div>
+          <div class="ov-card-title">Khái niệm & Vị trí</div>
+          <div class="ov-card-sub">Gia đình là gì? Ba vị trí của gia đình trong xã hội theo quan điểm Mác–Lênin.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
       <a href="chuc-nang.html" class="ov-card">
-        <div class="ov-card-num">02</div>
-        <div class="ov-card-title">Chức năng Gia đình</div>
-        <div class="ov-card-sub">Bốn chức năng cơ bản: tái sản xuất, nuôi dưỡng, kinh tế và tâm lý–tình cảm.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình nuôi dưỡng"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">02</div>
+          <div class="ov-card-title">Chức năng Gia đình</div>
+          <div class="ov-card-sub">Bốn chức năng cơ bản: tái sản xuất, nuôi dưỡng, kinh tế và tâm lý–tình cảm.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
       <a href="co-so.html" class="ov-card">
-        <div class="ov-card-num">03</div>
-        <div class="ov-card-title">Cơ sở Xây dựng GĐ</div>
-        <div class="ov-card-sub">Bốn trụ cột: kinh tế–xã hội, chính trị–pháp lý, văn hóa–tư tưởng và hôn nhân tiến bộ.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=500&auto=format&fit=crop&q=70" alt="Tết Nguyên Đán — hôn nhân tiến bộ"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">03</div>
+          <div class="ov-card-title">Cơ sở Xây dựng GĐ</div>
+          <div class="ov-card-sub">Bốn trụ cột: kinh tế–xã hội, chính trị–pháp lý, văn hóa–tư tưởng và hôn nhân tiến bộ.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- XEN KẼ: Gia đình truyền thống -->
+<div class="interleave reveal">
+  <div class="interleave-img" style="background-image:url('https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+  <div class="interleave-text">
+    <div>
+      <div class="interleave-label">Gia đình truyền thống</div>
+      <p class="interleave-title">Đại gia đình Việt Nam — nơi nhiều thế hệ sống chung dưới một mái nhà, chia sẻ tình thương và trách nhiệm.</p>
+      <p class="interleave-desc">Mô hình chiếm ưu thế trong xã hội nông nghiệp, nơi sự gắn kết huyết thống và hiếu thảo là giá trị cốt lõi.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Phần 2: Phân tích thực tiễn -->
+<section class="section section--dark" style="padding-top:60px;">
+  <div class="container">
     <div class="cards-grid cards-grid--3 reveal" style="margin-bottom:1.5rem;">
       <a href="tinh-huong.html" class="ov-card">
-        <div class="ov-card-num">04</div>
-        <div class="ov-card-title">Phân tích Tình huống</div>
-        <div class="ov-card-sub">Câu chuyện vợ chồng Lan — hai góc nhìn, một vấn đề. Phân tích khoa học và kết luận.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình đa thế hệ" style="object-position:top;"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">04</div>
+          <div class="ov-card-title">Phân tích Tình huống</div>
+          <div class="ov-card-sub">Câu chuyện vợ chồng Lan — hai góc nhìn, một vấn đề. Phân tích khoa học và kết luận.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
       <a href="so-sanh.html" class="ov-card">
-        <div class="ov-card-num">05</div>
-        <div class="ov-card-title">So sánh hai mô hình</div>
-        <div class="ov-card-sub">Gia đình truyền thống vs gia đình hạt nhân — bảng so sánh 10 tiêu chí và biểu đồ.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=500&auto=format&fit=crop&q=70" alt="Nông thôn Việt Nam — gia đình truyền thống"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">05</div>
+          <div class="ov-card-title">So sánh hai mô hình</div>
+          <div class="ov-card-sub">Gia đình truyền thống vs gia đình hạt nhân — bảng so sánh 10 tiêu chí và biểu đồ.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
       <a href="bien-doi.html" class="ov-card">
-        <div class="ov-card-num">06</div>
-        <div class="ov-card-title">Biến đổi GĐ Việt Nam</div>
-        <div class="ov-card-sub">Timeline lịch sử biến đổi, thống kê thực tiễn và nhận định của nhóm.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=500" alt="TP.HCM — đô thị hóa"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">06</div>
+          <div class="ov-card-title">Biến đổi GĐ Việt Nam</div>
+          <div class="ov-card-sub">Timeline lịch sử biến đổi, thống kê thực tiễn và nhận định của nhóm.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- XEN KẼ: Đô thị hóa (đảo chiều) -->
+<div class="interleave interleave--reverse reveal">
+  <div class="interleave-text">
+    <div>
+      <div class="interleave-label">Đô thị hóa & Gia đình hạt nhân</div>
+      <p class="interleave-title">TP. Hồ Chí Minh — nơi mô hình gia đình hạt nhân phát triển mạnh mẽ nhất cả nước.</p>
+      <p class="interleave-desc">Công nghiệp hóa, đô thị hóa thúc đẩy xu thế sống riêng, tự lập — một quy luật tất yếu khách quan.</p>
+    </div>
+  </div>
+  <div class="interleave-img" style="background-image:url('https://images.pexels.com/photos/941195/pexels-photo-941195.jpeg?auto=compress&cs=tinysrgb&w=800')"></div>
+</div>
+
+<!-- Phần 3: Kết luận + Phụ lục -->
+<section class="section section--dark" style="padding-top:60px;">
+  <div class="container">
     <div class="cards-grid cards-grid--3 reveal">
       <a href="ket-luan.html" class="ov-card">
-        <div class="ov-card-num">07</div>
-        <div class="ov-card-title">Kết luận & Chính sách</div>
-        <div class="ov-card-sub">Tổng kết lý luận, đường lối Đảng–Nhà nước và tài liệu tham khảo.</div>
-        <span class="ov-card-link">Xem trang →</span>
+        <div class="ov-card-img-wrap">
+          <img class="ov-card-img" src="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Gia đình Việt Nam hiện đại"/>
+        </div>
+        <div class="ov-card-body">
+          <div class="ov-card-num">07</div>
+          <div class="ov-card-title">Kết luận & Chính sách</div>
+          <div class="ov-card-sub">Tổng kết lý luận, đường lối Đảng–Nhà nước và tài liệu tham khảo.</div>
+          <span class="ov-card-link">Xem trang →</span>
+        </div>
       </a>
       <a href="ai-usage.html" class="ov-card" style="border-color:rgba(52,152,219,.3);">
-        <div class="ov-card-num" style="color:#3498db;">+</div>
-        <div class="ov-card-title">AI Usage · Phụ lục</div>
-        <div class="ov-card-sub">Minh bạch công cụ AI, prompt đã dùng, cam kết liêm chính học thuật.</div>
-        <span class="ov-card-link" style="color:#3498db;">Xem phụ lục →</span>
+        <div class="ov-card-body">
+          <div class="ov-card-num" style="color:#3498db;">+</div>
+          <div class="ov-card-title">AI Usage · Phụ lục</div>
+          <div class="ov-card-sub">Minh bạch công cụ AI, prompt đã dùng, cam kết liêm chính học thuật.</div>
+          <span class="ov-card-link" style="color:#3498db;">Xem phụ lục →</span>
+        </div>
       </a>
       <a href="#quiz" class="ov-card" style="border-color:rgba(26,122,74,.3);">
-        <div class="ov-card-num" style="color:var(--green);">?</div>
-        <div class="ov-card-title">Quiz · Trắc nghiệm</div>
-        <div class="ov-card-sub">Kiểm tra kiến thức Chương 7 với 5 câu hỏi trắc nghiệm tương tác.</div>
-        <span class="ov-card-link" style="color:var(--green);">Làm quiz →</span>
+        <div class="ov-card-body">
+          <div class="ov-card-num" style="color:var(--green);">?</div>
+          <div class="ov-card-title">Quiz · Trắc nghiệm</div>
+          <div class="ov-card-sub">Kiểm tra kiến thức Chương 7 với 5 câu hỏi trắc nghiệm tương tác.</div>
+          <span class="ov-card-link" style="color:var(--green);">Làm quiz →</span>
+        </div>
       </a>
     </div>
   </div>
@@ -293,11 +440,15 @@
   </div>
 </section>
 
-<!-- ẢNH MINH HỌA -->
-<div style="height:320px;background:linear-gradient(to right,rgba(10,20,40,.7) 0%,rgba(10,20,40,.4) 50%,rgba(10,20,40,.7) 100%),url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;display:flex;align-items:center;overflow:hidden;position:relative;">
-  <div class="container" style="position:relative;z-index:2;">
-    <p style="font-size:clamp(.95rem,2.2vw,1.5rem);font-weight:700;color:#fff;max-width:620px;line-height:1.55;font-style:italic;">"Gia đình là nơi cuộc sống bắt đầu và tình yêu không bao giờ kết thúc — dù hình thức có thay đổi."</p>
-    <p style="margin-top:.85rem;font-size:.8rem;color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;">Chương 7 · Vấn đề Gia đình · MLN131</p>
+<!-- XEN KẼ: Trích dẫn + Ảnh Tết -->
+<div class="interleave reveal">
+  <div class="interleave-img" style="background-image:url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1400&auto=format&fit=crop&q=70')"></div>
+  <div class="interleave-text" style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);">
+    <div>
+      <div class="interleave-label">Lời nhắn</div>
+      <p class="interleave-title" style="font-style:italic;">"Gia đình là nơi cuộc sống bắt đầu và tình yêu không bao giờ kết thúc — dù hình thức có thay đổi."</p>
+      <p class="interleave-desc" style="color:var(--gold);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;">Chương 7 · Vấn đề Gia đình · MLN131</p>
+    </div>
   </div>
 </div>
 
