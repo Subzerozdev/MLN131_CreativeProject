@@ -1,250 +1,691 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2 · Căn cứ Lý luận · Chương 7 · MLN131</title>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<nav>
-  <div class="nav-inner">
-    <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="tinh-huong.html">1 · Phân tích</a></li>
-      <li><a href="khai-niem.html" class="active">2 · Lý luận</a></li>
-      <li><a href="so-sanh.html">3 · Nhận định</a></li>
-      <li><a href="ai-usage.html">AI Usage</a></li>
-    </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-progress" id="navProgress"></div>
-</nav>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Chủ nghĩa XHKH — Gia đình & Thời kỳ Quá độ</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="tinh-huong.html">1 · Phân tích</a></li>
+        <li><a href="khai-niem.html" class="active">2 · Lý luận</a></li>
+        <li><a href="so-sanh.html">3 · Nhận định</a></li>
+        <li><a href="ai-usage.html">AI Usage</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-progress" id="navProgress"></div>
+  </nav>
 
-<div class="page-hero" style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
-  <div class="container">
-    <div class="page-hero-inner">
-      <div class="page-breadcrumb">
-        <a href="index.html">Trang chủ</a><span>/</span><span>2 · Căn cứ Lý luận</span>
+  <div class="page-hero"
+    style="background: linear-gradient(160deg, rgba(10,20,40,.91) 0%, rgba(15,31,61,.84) 55%, rgba(10,20,40,.91) 100%), url('https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1400&auto=format&fit=crop&q=70') center/cover no-repeat;">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="page-breadcrumb">
+          <a href="index.html">Trang chủ</a><span>/</span><span>2 · Căn cứ Lý luận</span>
+        </div>
+        <h1 class="page-hero-title">Căn cứ <span class="accent">Lý luận</span></h1>
+        <p class="page-hero-sub">Gia đình hạt nhân đang thay thế gia đình truyền thống là quy luật tất yếu hay là sự suy
+          thoái? Các chức năng cơ bản của gia đình có bị ảnh hưởng không?</p>
       </div>
-      <h1 class="page-hero-title">Căn cứ <span class="accent">Lý luận</span></h1>
-      <p class="page-hero-sub">Khái niệm gia đình, gia đình hạt nhân vs truyền thống, kết luận tất yếu, và các chức năng cơ bản.</p>
-      <span class="page-hero-badge">2 · Căn cứ lý luận · Giáo trình tr. 239–257</span>
     </div>
   </div>
-</div>
 
-<!-- 2a. KHÁI NIỆM GIA ĐÌNH -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="section-label reveal">2a · Khái niệm</div>
-    <h2 class="section-title reveal">Gia đình là gì?</h2>
-    <div class="divider reveal"></div>
+  <!-- 2a. KHÁI NIỆM GIA ĐÌNH -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-label reveal">2a · Khái niệm</div>
+      <h2 class="section-title reveal">Gia đình là gì?</h2>
+      <div class="divider reveal"></div>
 
-    <div class="blockquote reveal">
-      <p>
-        "Gia đình là một hình thức cộng đồng xã hội đặc biệt, được hình thành, duy trì và củng cố
-        chủ yếu dựa trên cơ sở <strong>hôn nhân</strong>, <strong>quan hệ huyết thống</strong> và
-        <strong>quan hệ nuôi dưỡng</strong>, cùng những quy định về quyền và nghĩa vụ của các
-        thành viên trong gia đình."
+      <div class="blockquote reveal" style="margin-top:1.5rem">
+        <p>
+          "Gia đình là một hình thức cộng đồng xã hội đặc biệt, được hình thành, duy trì và củng cố
+          chủ yếu dựa trên cơ sở <strong>hôn nhân</strong>, <strong>quan hệ huyết thống</strong> và
+          <strong>quan hệ nuôi dưỡng</strong>, cùng những quy định về quyền và nghĩa vụ của các
+          thành viên trong gia đình."
+        </p>
+        <cite>— Giáo trình Chủ nghĩa Xã hội Khoa học, Bộ GD&amp;ĐT, 2021, tr. 239</cite>
+      </div>
+
+      <div style="margin-top:2rem;" class="reveal">
+        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=1000&auto=format&fit=crop&q=80"
+          alt="Gia đình Việt Nam" class="content-img content-img--md"
+          style="height:350px;border:1px solid rgba(201,168,76,.15);object-fit:cover;border-radius:var(--r2);" />
+        <p class="img-caption">Gia đình Việt Nam — tế bào cơ bản của xã hội</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2b. KHÁI NIỆM GIA ĐÌNH HẠT NHÂN & TRUYỀN THỐNG -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-label reveal">2b · Hai mô hình gia đình</div>
+      <h2 class="section-title reveal">Gia đình Hạt nhân & Truyền thống</h2>
+      <div class="divider reveal"></div>
+      <div class="cards-grid cards-grid--2 reveal">
+        <div
+          style="background:rgba(26,122,74,.04);border:2px solid rgba(26,122,74,.2);border-radius:var(--r2);padding:2rem;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+            <div
+              style="width:40px;height:40px;border-radius:var(--r);background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.25);display:flex;align-items:center;justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width:22px;height:22px;">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </div>
+            <div>
+              <div style="font-weight:800;font-size:1.05rem;">Gia đình Hạt nhân</div>
+              <div style="font-size:.78rem;color:var(--muted);">2 thế hệ · Vợ chồng & con cái</div>
+            </div>
+          </div>
+          <p style="font-size:.9rem;color:var(--muted);line-height:1.7;">
+            Chỉ gồm vợ, chồng và con cái chưa trưởng thành (3–5 người). Tự lập kinh tế, có
+            không gian cá nhân. Phổ biến trong xã hội công nghiệp, đô thị hiện đại.
+          </p>
+        </div>
+        <div
+          style="background:rgba(192,57,43,.04);border:2px solid rgba(192,57,43,.2);border-radius:var(--r2);padding:2rem;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
+            <div
+              style="width:40px;height:40px;border-radius:var(--r);background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.25);display:flex;align-items:center;justify-content:center;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" style="width:22px;height:22px;">
+                <rect x="3" y="9" width="18" height="12" rx="2" />
+                <path d="M3 9 12 3l9 6" />
+                <path d="M9 21V9h6v12" />
+              </svg>
+            </div>
+            <div>
+              <div style="font-weight:800;font-size:1.05rem;">Gia đình Truyền thống</div>
+              <div style="font-size:.78rem;color:var(--muted);">Đại gia đình · Nhiều thế hệ</div>
+            </div>
+          </div>
+          <p style="font-size:.9rem;color:var(--muted);line-height:1.7;">
+            Nhiều thế hệ sống chung (3–4 thế hệ, 8–15+ người). Chia sẻ tài sản, lao động và
+            trách nhiệm. Người lớn tuổi có tiếng nói quyết định. Phổ biến trong xã hội nông nghiệp.
+          </p>
+        </div>
+      </div>
+
+      <div class="img-row reveal" style="margin-top:2rem;">
+        <div>
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=700&auto=format&fit=crop&q=80"
+            alt="Gia đình hạt nhân" class="content-img content-img--sm" style="height:240px;object-fit:cover;" />
+          <p class="img-caption">Gia đình hạt nhân — vợ chồng và con cái</p>
+        </div>
+        <div>
+          <img
+            src="https://dntt.mediacdn.vn/zoom/700_438/197608888129458176/2023/7/3/photo-1688369893242-16883698933631395819043-15-0-423-652-crop-16883699078831183269334.jpg"
+            alt="Đại gia đình" class="content-img content-img--sm" style="height:240px;object-fit:cover;" />
+          <p class="img-caption">Đại gia đình — mô hình nhiều thế hệ sống chung</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2b1. XU HƯỚNG MÔ HÌNH GIA ĐÌNH — DẪNCHỨNG VĂN KIỆN -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-label reveal">2b1 · Hiện trạng</div>
+      <h2 class="section-title reveal">Xu thế mô hình gia đình tại Việt Nam</h2>
+      <div class="divider reveal"></div>
+
+      <p class="section-sub reveal">
+        Quá trình chuyển dịch từ gia đình truyền thống sang gia đình hạt nhân ở Việt Nam được ghi nhận
+        trong các văn kiện, chính sách và hội nghị quốc gia.
       </p>
-      <cite>— Giáo trình Chủ nghĩa Xã hội Khoa học, Bộ GD&amp;ĐT, 2021, tr. 239</cite>
-    </div>
 
-    <p class="section-sub reveal" style="margin-top:1.5rem;">
-      Gia đình là thiết chế xã hội cơ bản nhất, được hình thành từ hai mối quan hệ nền tảng:
-      <strong>hôn nhân</strong> (giữa vợ và chồng) và <strong>huyết thống/nuôi dưỡng</strong>
-      (giữa cha mẹ và con cái). Gia đình vừa là tế bào của xã hội, vừa là tổ ấm hạnh phúc,
-      vừa là cầu nối giữa cá nhân và xã hội.
-    </p>
+      <div style="margin-top:2.5rem;" class="reveal">
+        <style>
+          .custom-timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+          }
 
-    <div style="margin-top:2rem;" class="reveal">
-      <img src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Gia đình Việt Nam" class="content-img content-img--md" style="height:260px;border:1px solid rgba(201,168,76,.15);"/>
-      <p class="img-caption">Gia đình Việt Nam — tế bào cơ bản của xã hội</p>
-    </div>
-  </div>
-</section>
+          .custom-timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(180deg, #e74c3c, #f39c12, #2ecc71, #3498db, #9b59b6);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+          }
 
-<!-- 2b. KHÁI NIỆM GIA ĐÌNH HẠT NHÂN & TRUYỀN THỐNG -->
-<section class="section section--gray">
-  <div class="container">
-    <div class="section-label reveal">2b · Hai mô hình gia đình</div>
-    <h2 class="section-title reveal">Gia đình Truyền thống vs Hạt nhân</h2>
-    <div class="divider reveal"></div>
-    <div class="cards-grid cards-grid--2 reveal">
-      <div style="background:rgba(192,57,43,.04);border:2px solid rgba(192,57,43,.2);border-radius:var(--r2);padding:2rem;">
-        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
-          <div style="width:40px;height:40px;border-radius:var(--r);background:rgba(192,57,43,.1);border:1px solid rgba(192,57,43,.25);display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M3 9 12 3l9 6"/><path d="M9 21V9h6v12"/></svg></div>
-          <div>
-            <div style="font-weight:800;font-size:1.05rem;">Gia đình Truyền thống</div>
-            <div style="font-size:.78rem;color:var(--muted);">Đại gia đình · Nhiều thế hệ</div>
+          .ctl-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+          }
+
+          .ctl-item.left {
+            left: 0;
+            text-align: right;
+          }
+
+          .ctl-item.right {
+            left: 50%;
+            text-align: left;
+          }
+
+          .ctl-item::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            right: -12px;
+            background-color: var(--white);
+            border: 4px solid var(--gold);
+            top: 28px;
+            border-radius: 50%;
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(201, 168, 76, .2);
+          }
+
+          .ctl-item.right::after {
+            left: -12px;
+            right: auto;
+          }
+
+          .ctl-content {
+            padding: 1.8rem;
+            background: var(--white);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: var(--r2);
+            position: relative;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: left;
+          }
+
+          .ctl-item:hover .ctl-content {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow2);
+          }
+
+          .ctl-year {
+            display: inline-block;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--gold), #e67e22);
+            padding: 0.4rem 1.4rem;
+            border-radius: 99px;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+            letter-spacing: 1px;
+          }
+
+          .ctl-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+          }
+
+          .ctl-text {
+            font-size: 0.95rem;
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 0;
+          }
+
+          .ctl-image {
+            margin-top: 1.25rem;
+            border-radius: var(--r);
+            overflow: hidden;
+            border: 1px solid var(--gray2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          }
+
+          .ctl-image img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s;
+          }
+
+          .ctl-item:hover .ctl-image img {
+            transform: scale(1.05);
+          }
+
+          @media screen and (max-width: 768px) {
+            .custom-timeline::after {
+              left: 31px;
+              transform: none;
+            }
+
+            .ctl-item {
+              width: 100%;
+              padding-left: 70px;
+              padding-right: 0;
+              text-align: left;
+            }
+
+            .ctl-item.right {
+              left: 0;
+            }
+
+            .ctl-item.left::after,
+            .ctl-item.right::after {
+              left: 19px;
+              right: auto;
+            }
+          }
+        </style>
+
+        <div class="custom-timeline">
+
+          <div class="ctl-item left reveal">
+            <div class="ctl-content">
+              <div class="ctl-year">2000 & 2005</div>
+              <div class="ctl-title">Luật Hôn nhân và Gia đình 2000 & Chỉ thị 49-CT/TW</div>
+              <p class="ctl-text">Ban chỉ đạo Trung ương bắt đầu nhận diện sự chuyển dịch từ gia đình truyền thống sang
+                gia đình hiện đại, nhấn mạnh bảo vệ quyền lợi cá nhân trong gia đình nhỏ.</p>
+            </div>
           </div>
-        </div>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;">
-          Nhiều thế hệ sống chung (3–4 thế hệ, 8–15+ người). Chia sẻ tài sản, lao động và
-          trách nhiệm. Người lớn tuổi có tiếng nói quyết định. Phổ biến trong xã hội nông nghiệp.
-        </p>
-      </div>
-      <div style="background:rgba(26,122,74,.04);border:2px solid rgba(26,122,74,.2);border-radius:var(--r2);padding:2rem;">
-        <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1rem;">
-          <div style="width:40px;height:40px;border-radius:var(--r);background:rgba(26,122,74,.1);border:1px solid rgba(26,122,74,.25);display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-          <div>
-            <div style="font-weight:800;font-size:1.05rem;">Gia đình Hạt nhân</div>
-            <div style="font-size:.78rem;color:var(--muted);">2 thế hệ · Vợ chồng & con cái</div>
+
+          <div class="ctl-item right reveal">
+            <div class="ctl-content" style="border-top: 4px solid #e74c3c;">
+              <div class="ctl-year" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">2011</div>
+              <div class="ctl-title">Chiến lược phát triển Gia đình Việt Nam đến 2020</div>
+              <p class="ctl-text">Chính thức đưa ra các mục tiêu xây dựng gia đình "Ít con" (hạt nhân hóa) để đảm bảo
+                chất lượng cuộc sống và nuôi dạy trẻ tốt hơn.</p>
+              <div class="ctl-image"><img
+                  src="https://static-images.vnncdn.net/files/publish/2024/1/5/chien-luoc-phat-trien-gia-dinh-viet-nam-den-nam-2020-tam-nhin-2030-dat-duoc-nhieu-thanh-tuu-628.jpg?width=0&s=SM-Eb1HU-6AsustXSjRY3w"
+                  alt="Chiến lược 2020"></div>
+            </div>
           </div>
+
+          <div class="ctl-item left reveal">
+            <div class="ctl-content">
+              <div class="ctl-year">2013 & 2014</div>
+              <div class="ctl-title">Hiến pháp 2013 & Luật HN&GĐ 2014</div>
+              <p class="ctl-text">Khẳng định quyền hôn nhân tự nguyện, chế độ tài sản riêng. Nền tảng pháp lý vững chắc
+                cho gia đình hạt nhân tự chủ.</p>
+            </div>
+          </div>
+
+          <div class="ctl-item right reveal">
+            <div class="ctl-content" style="border-top: 4px solid #3498db;">
+              <div class="ctl-year" style="background: linear-gradient(135deg, #3498db, #2980b9);">2019</div>
+              <div class="ctl-title">Tổng điều tra Dân số và Nhà ở 2019</div>
+              <p class="ctl-text">Tỷ lệ hộ gia đình hạt nhân chiếm <strong>66,6%</strong> tổng số hộ gia đình — bằng
+                chứng định lượng mạnh mẽ nhất cho sự thay thế mô hình.</p>
+              <div class="ctl-image"><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Completed_Results_of_the_2019_Viet_Nam_Population_and_Housing_Census.pdf/page1-960px-Completed_Results_of_the_2019_Viet_Nam_Population_and_Housing_Census.pdf.jpg"
+                  alt="Tổng điều tra dân số 2019"></div>
+            </div>
+          </div>
+
+          <div class="ctl-item left reveal">
+            <div class="ctl-content" style="border-top: 4px solid #27ae60;">
+              <div class="ctl-year" style="background: linear-gradient(135deg, #2ecc71, #27ae60);">2021</div>
+              <div class="ctl-title">Văn kiện Đại hội XIII của Đảng</div>
+              <p class="ctl-text">Khẳng định vai trò của gia đình hạt nhân trong việc thích ứng với kinh tế số và xã hội
+                hiện đại.</p>
+              <div class="ctl-image"><img
+                  src="https://media.vov.vn/sites/default/files/styles/large/public/2021-02/HInh%20anh.jpg"
+                  alt="Văn kiện Đại hội XIII"></div>
+            </div>
+          </div>
+
+          <div class="ctl-item right reveal">
+            <div class="ctl-content" style="border-top: 4px solid #9b59b6;">
+              <div class="ctl-year" style="background: linear-gradient(135deg, #9b59b6, #8e44ad);">2021</div>
+              <div class="ctl-title">Quyết định 2238/QĐ-TTg (Chiến lược 2030)</div>
+              <p class="ctl-text">Phê duyệt Chiến lược phát triển gia đình Việt Nam đến 2030, xác định gia đình hạt nhân
+                là nòng cốt tiếp thu giá trị hiện đại.</p>
+              <div class="ctl-image"><img
+                  src="https://cdn.thuvienphapluat.vn//phap-luat/2022-2/LA/08-10-2022/gia-dinh-viet-nam-1.jpg"
+                  alt="Quyết định 2238"></div>
+            </div>
+          </div>
+
+          <div class="ctl-item left reveal">
+            <div class="ctl-content">
+              <div class="ctl-year">2023</div>
+              <div class="ctl-title">Nghị quyết số 42-NQ/TW</div>
+              <p class="ctl-text">Về chính sách xã hội, chú trọng hệ thống an sinh cho người già khi gia đình hạt nhân
+                không còn sống chung nhiều thế hệ.</p>
+            </div>
+          </div>
+
+          <div class="ctl-item right reveal">
+            <div class="ctl-content" style="border-top: 4px solid #e67e22;">
+              <div class="ctl-year" style="background: linear-gradient(135deg, #f39c12, #e67e22);">2025</div>
+              <div class="ctl-title">Hội thảo Khoa học Quốc gia về Biến đổi Gia đình</div>
+              <p class="ctl-text">Công bố dữ liệu mới nhất: gia đình hạt nhân chiếm trên <strong>70%</strong>, là quy
+                luật tất yếu của xã hội hiện đại hóa.</p>
+              <div class="ctl-image"><img src="https://img.lsvn.vn/resize/th/upload/2025/03/06/img-3712-21232744.jpeg"
+                  alt="Hội thảo Khoa học Quốc gia 2025"></div>
+            </div>
+          </div>
+
         </div>
-        <p style="font-size:.9rem;color:var(--muted);line-height:1.7;">
-          Chỉ gồm vợ, chồng và con cái chưa trưởng thành (3–5 người). Tự lập kinh tế, có
-          không gian cá nhân. Phổ biến trong xã hội công nghiệp, đô thị hiện đại.
-        </p>
       </div>
     </div>
+  </section>
 
-    <div class="img-row reveal" style="margin-top:2rem;">
-      <div>
-        <img src="https://images.pexels.com/photos/7363942/pexels-photo-7363942.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Đại gia đình" class="content-img content-img--sm" style="height:200px;"/>
-        <p class="img-caption">Đại gia đình — mô hình nhiều thế hệ sống chung</p>
-      </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=700&auto=format&fit=crop&q=70" alt="Gia đình hạt nhân" class="content-img content-img--sm" style="height:200px;"/>
-        <p class="img-caption">Gia đình hạt nhân — vợ chồng và con cái</p>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- 2c. KẾT LUẬN TẤT YẾU -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-label reveal">2c · Kết luận</div>
+      <h2 class="section-title reveal">Quy luật tất yếu hay Suy thoái?</h2>
+      <div class="divider reveal"></div>
+      <p class="section-sub reveal" style="color:rgba(255,255,255,.7);">Sự biến đổi từ gia đình truyền thống sang gia
+        đình hạt nhân là một quy luật tất yếu chứ không phải sự suy thoái. Nhóm kết luận điều này dựa trên 2 lý do
+        chính:</p>
 
-<!-- 2c. KẾT LUẬN TẤT YẾU -->
-<section class="section section--dark">
-  <div class="container">
-    <div class="section-label reveal">2c · Kết luận</div>
-    <h2 class="section-title reveal">Quy luật tất yếu hay Suy thoái?</h2>
-    <div class="divider reveal"></div>
-    <div class="cards-grid cards-grid--2 reveal">
-      <div style="background:rgba(26,122,74,.08);border:1.5px solid rgba(26,122,74,.3);border-radius:var(--r2);padding:2rem;">
-        <h3 style="color:#4caf78;font-size:1rem;font-weight:700;margin-bottom:1rem;">Đây là QUY LUẬT TẤT YẾU vì:</h3>
-        <ul style="padding-left:1.25rem;">
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Công nghiệp hóa, đô thị hóa buộc lao động di cư, sống riêng</li>
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Kinh tế thị trường: mỗi gia đình là đơn vị kinh tế độc lập</li>
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Bình đẳng giới: phụ nữ tự chủ kinh tế, không lệ thuộc gia đình chồng</li>
-          <li style="color:#a8b8d8;font-size:.9rem;line-height:1.6;">Mọi nước công nghiệp hóa đều trải qua: Nhật, Hàn, các nước phương Tây</li>
-        </ul>
-      </div>
-      <div style="background:rgba(192,57,43,.08);border:1.5px solid rgba(192,57,43,.3);border-radius:var(--r2);padding:2rem;">
-        <h3 style="color:#e74c3c;font-size:1rem;font-weight:700;margin-bottom:1rem;">Nguy cơ CẦN TRÁNH:</h3>
-        <ul style="padding-left:1.25rem;">
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Gia đình bị "nguyên tử hóa" — mất kết nối với gia đình lớn</li>
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Coi cha mẹ như người ngoài, không thăm hỏi phụng dưỡng</li>
-          <li style="color:#a8b8d8;font-size:.9rem;margin-bottom:.5rem;line-height:1.6;">Bỏ qua hoàn toàn các chức năng nuôi dưỡng, giáo dục con cái</li>
-          <li style="color:#a8b8d8;font-size:.9rem;line-height:1.6;">Chủ nghĩa cá nhân cực đoan, phủ nhận trách nhiệm cộng đồng</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2d. CHỨC NĂNG CƠ BẢN -->
-<section class="section section--cream">
-  <div class="container">
-    <div class="section-label reveal">2d · Chức năng gia đình</div>
-    <h2 class="section-title reveal">Bốn chức năng cơ bản</h2>
-    <div class="divider reveal"></div>
-    <p class="section-sub reveal">
-      Theo giáo trình CNXHKH (tr. 243–250), gia đình có 4 chức năng thiết yếu:
-    </p>
-    <div class="cards-grid cards-grid--4 reveal">
-      <div class="fn-card">
-        <div class="fn-num">01</div>
-        <div class="fn-title">Tái sản xuất ra con người</div>
-        <p class="fn-desc">Chức năng sinh học–xã hội đặc trưng nhất. Duy trì nòi giống và tái sản xuất sức lao động cho xã hội.</p>
-        <span class="fn-badge">Sinh học – Xã hội</span>
-      </div>
-      <div class="fn-card">
-        <div class="fn-num">02</div>
-        <div class="fn-title">Nuôi dưỡng &amp; Giáo dục</div>
-        <p class="fn-desc">Môi trường giáo dục đầu tiên và lâu bền nhất. Hình thành nhân cách, đạo đức, lối sống cho con người.</p>
-        <span class="fn-badge">Văn hóa – Giáo dục</span>
-      </div>
-      <div class="fn-card">
-        <div class="fn-num">03</div>
-        <div class="fn-title">Kinh tế &amp; Tổ chức tiêu dùng</div>
-        <p class="fn-desc">Đơn vị kinh tế cơ bản — tổ chức sản xuất, phân phối, tiêu dùng và tích lũy tài sản.</p>
-        <span class="fn-badge">Kinh tế – Xã hội</span>
-      </div>
-      <div class="fn-card">
-        <div class="fn-num">04</div>
-        <div class="fn-title">Tâm lý – Tình cảm</div>
-        <p class="fn-desc">Nơi các thành viên được yêu thương, chăm sóc, chia sẻ. Ngày càng quan trọng trong xã hội hiện đại.</p>
-        <span class="fn-badge">Tâm lý – Tình cảm</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 2e. KẾT LUẬN CHỨC NĂNG -->
-<section class="section section--dark">
-  <div class="container">
-    <div class="section-label reveal">2e · Kết luận</div>
-    <h2 class="section-title reveal">Chức năng gia đình có bị ảnh hưởng?</h2>
-    <div class="divider reveal"></div>
-
-    <div style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--r2);padding:2rem;" class="reveal">
-      <h3 style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:8px;">
-        <span style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;"></span>
-        Kết luận: Biến đổi hình thức, không mất đi bản chất
+      <h3 style="color:var(--gold);margin-top:2rem;margin-bottom:1.5rem;font-size:1.1rem;font-weight:700;"
+        class="reveal">
+        <span
+          style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;margin-right:8px;"></span>
+        Lý do 1: Sự biến đổi nhằm thích nghi và phù hợp hơn với tình hình mới, thời đại mới
       </h3>
-      <p style="color:#a8b8d8;font-size:.95rem;line-height:1.8;">
-        Bốn chức năng cơ bản không tự nhiên mất đi trong thời kỳ quá độ. Chúng
-        <strong style="color:var(--gold2);">biến đổi hình thức</strong> để thích nghi với điều kiện
-        kinh tế–xã hội mới. Gia đình hạt nhân hay đại gia đình đều có thể thực hiện đầy đủ
-        các chức năng này — vấn đề là <strong style="color:var(--gold2);">ý thức và trách nhiệm</strong>
-        của các thành viên, không phải quy mô hay cấu trúc.
-      </p>
+
+      <div class="cards-grid cards-grid--2 reveal" style="margin-bottom:2rem;">
+        <div
+          style="background:rgba(74,144,226,.05);border:1px solid rgba(74,144,226,.15);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80"
+            alt="Phương thức sản xuất" style="width:100%;height:180px;object-fit:cover;" />
+          <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
+            <h3 style="color:#3498db;font-weight:700;font-size:0.95rem;margin:0 0 0.5rem 0;">Tính chất công việc</h3>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin:0;">Thời đại mới đòi hỏi người lao động
+              phải đi theo dự án, theo thị trường. Thì gia đinh hạt nhân là phù hợp do tính nhỏ gọn, dễ dàng di chuyển,
+              thuê nhà hoặc định cư tại các đô thị theo yêu cầu công việc.
+
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(74,144,226,.05);border:1px solid rgba(74,144,226,.15);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=600&auto=format&fit=crop&q=80"
+            alt="Đô thị hóa" style="width:100%;height:180px;object-fit:cover;" />
+          <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
+            <h3 style="color:#3498db;font-weight:700;font-size:0.95rem;margin:0 0 0.5rem 0;">Quá trình đô thị hóa</h3>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin:0;">Không gian sống tại đô thị thường
+              có diện tích giới hạn, không phù hợp cho quá nhiều thế hệ cùng sinh sống. Lối sống đô
+              thị đòi hỏi sự năng động và linh hoạt, điều mà gia đình hạt nhân đáp ứng tốt hơn.
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(74,144,226,.05);border:1px solid rgba(74,144,226,.15);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://phapluatchinhsach.vn/Pic/images/_2bdb0af3-80c0-4c19-833c-a429f7cd0e4d.webp"
+            alt="An sinh xã hội" style="width:100%;height:180px;object-fit:cover;" />
+          <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
+            <h3 style="color:#3498db;font-weight:700;font-size:0.95rem;margin:0 0 0.5rem 0;">Giải phóng sức lao động và
+              bình đẳng giới
+            </h3>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin:0;">Thời kỳ quá độ hướng tới một xã hội
+              công bằng giữa nam và nữ. Nền kinh tế cần sự tham gia của phụ nữ vào lực lượng lao động. Thay vì bị ràng
+              buộc với nghĩa vụ và các lễ nghi phức tạp. Gia đình hạt nhân giúp tách biệt và tạo điều kiện cho họ có
+              thời gian học tập, làm việc và thăng tiến
+            </p>
+          </div>
+        </div>
+
+        <div
+          style="background:rgba(74,144,226,.05);border:1px solid rgba(74,144,226,.15);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=600&auto=format&fit=crop&q=80"
+            alt="Tự do cá nhân" style="width:100%;height:180px;object-fit:cover;" />
+          <div style="padding:1.5rem;flex:1;display:flex;flex-direction:column;">
+            <h3 style="color:#3498db;font-weight:700;font-size:0.95rem;margin:0 0 0.5rem 0;">Nhu cầu về tự do cá nhân
+            </h3>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin:0;"> Trình độ dân trí nâng cao khiến
+              con người coi trọng quyền riêng tư, sự tự do phát triển cá nhân và giảm bớt những lễ nghi, áp lực từ mô
+              hình gia đình đông con cháu</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="color:var(--gold);margin-top:2rem;margin-bottom:1.5rem;font-size:1.1rem;font-weight:700;"
+        class="reveal">
+        <span
+          style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;margin-right:8px;"></span>
+        Lý do 2: Sự biến đổi không làm mất đi chức năng cốt lõi của gia đình
+      </h3>
+
+      <div
+        style="background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:var(--r2);padding:2rem;"
+        class="reveal">
+        <p style="color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.8;margin:0;">
+          Bốn chức năng cơ bản không tự nhiên mất đi. Chúng <strong style="color:var(--gold);">biến đổi hình
+            thức</strong> để thích nghi với điều kiện kinh tế–xã hội mới, nhưng bản chất và giá trị cốt lõi vẫn được bảo
+          toàn.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2d. CHỨC NĂNG CƠ BẢN -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-label reveal">2d · Chức năng gia đình</div>
+      <h2 class="section-title reveal">Bốn chức năng cơ bản</h2>
+      <div class="divider reveal"></div>
+
+      <div class="cards-grid cards-grid--2 reveal" style="gap:2rem;margin-top:2.5rem;">
+        <!-- CHỨC NĂNG 1: TÁI SẢN XUẤT RA CON NGƯỜI -->
+        <div
+          style="background:rgba(26,122,74,.05);border:1px solid rgba(26,122,74,.2);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&auto=format&fit=crop&q=80"
+            alt="Tái sản xuất" style="width:100%;height:160px;object-fit:cover;" />
+          <div style="padding:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+              <div
+                style="width:50px;height:50px;border-radius:50%;background:rgba(26,122,74,.15);border:2px solid rgba(26,122,74,.3);display:flex;align-items:center;justify-content:center;font-weight:800;color:#4caf78;flex-shrink:0;font-size:1.2rem;">
+                01</div>
+              <h3 style="color:#4caf78;font-weight:700;font-size:1rem;margin:0;">Tái sản xuất ra con người</h3>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:1.25rem;">Chức năng sinh học–xã
+              hội đặc trưng nhất. Duy trì nòi giống và tái sản xuất sức lao động cho xã hội.</p>
+
+            <div
+              style="background:rgba(26,122,74,.08);border-left:3px solid rgba(26,122,74,.4);padding:1rem;border-radius:var(--r);margin-bottom:0.75rem;">
+              <h4 style="color:#4caf78;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Sự thay đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Chuyển từ sinh đẻ tự nhiên, số
+                lượng
+                lớn sang sinh đẻ có kế hoạch, sử dụng y học để đảm bảo sức khỏe.</p>
+            </div>
+            <div
+              style="background:rgba(26,122,74,.08);border-left:3px solid rgba(26,122,74,.4);padding:1rem;border-radius:var(--r);">
+              <h4 style="color:#4caf78;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Bản chất không đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Vẫn là duy trì nòi giống và đảm
+                bảo
+                sự tồn tại liên tục của nhân loại.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHỨC NĂNG 2: NUÔI DƯỠNG & GIÁO DỤC -->
+        <div
+          style="background:rgba(230,126,34,.05);border:1px solid rgba(230,126,34,.2);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop&q=80"
+            alt="Nuôi dưỡng giáo dục" style="width:100%;height:160px;object-fit:cover;" />
+          <div style="padding:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+              <div
+                style="width:50px;height:50px;border-radius:50%;background:rgba(230,126,34,.15);border:2px solid rgba(230,126,34,.3);display:flex;align-items:center;justify-content:center;font-weight:800;color:#e67e22;flex-shrink:0;font-size:1.2rem;">
+                02</div>
+              <h3 style="color:#e67e22;font-weight:700;font-size:1rem;margin:0;">Nuôi dưỡng &amp; Giáo dục</h3>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:1.25rem;">Môi trường giáo dục
+              đầu
+              tiên và lâu bền nhất. Hình thành nhân cách, đạo đức, lối sống.</p>
+
+            <div
+              style="background:rgba(230,126,34,.08);border-left:3px solid rgba(230,126,34,.4);padding:1rem;border-radius:var(--r);margin-bottom:0.75rem;">
+              <h4 style="color:#e67e22;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Sự thay đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Gia đình đóng vai trò "người điều
+                phối" phối hợp với nhà trường, trung tâm kỹ năng và truyền thông.</p>
+            </div>
+            <div
+              style="background:rgba(230,126,34,.08);border-left:3px solid rgba(230,126,34,.4);padding:1rem;border-radius:var(--r);">
+              <h4 style="color:#e67e22;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Bản chất không đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Gia đình vẫn là trường học đầu
+                tiên
+                để hình thành nhân cách và giá trị đạo đức.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHỨC NĂNG 3: KINH TẾ & TỔ CHỨC TIÊU DÙNG -->
+        <div
+          style="background:rgba(52,152,219,.05);border:1px solid rgba(52,152,219,.2);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&auto=format&fit=crop&q=80"
+            alt="Kinh tế" style="width:100%;height:160px;object-fit:cover;" />
+          <div style="padding:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+              <div
+                style="width:50px;height:50px;border-radius:50%;background:rgba(52,152,219,.15);border:2px solid rgba(52,152,219,.3);display:flex;align-items:center;justify-content:center;font-weight:800;color:#3498db;flex-shrink:0;font-size:1.2rem;">
+                03</div>
+              <h3 style="color:#3498db;font-weight:700;font-size:1rem;margin:0;">Kinh tế &amp; Tiêu dùng</h3>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:1.25rem;">Đơn vị kinh tế cơ bản
+              —
+              tổ chức sản xuất, phân phối, tiêu dùng và tích lũy tài sản.</p>
+
+            <div
+              style="background:rgba(52,152,219,.08);border-left:3px solid rgba(52,152,219,.4);padding:1rem;border-radius:var(--r);margin-bottom:0.75rem;">
+              <h4 style="color:#3498db;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Sự thay đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Chuyển từ "tự cấp tự túc" sang hộ
+                gia đình tham gia thị trường với tiêu dùng thông minh.</p>
+            </div>
+            <div
+              style="background:rgba(52,152,219,.08);border-left:3px solid rgba(52,152,219,.4);padding:1rem;border-radius:var(--r);">
+              <h4 style="color:#3498db;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Bản chất không đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Gia đình vẫn là đơn vị kinh tế cơ
+                sở
+                đảm bảo điều kiện vật chất cho các thành viên.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHỨC NĂNG 4: TÂM LÝ – TÌNH CẢM -->
+        <div
+          style="background:rgba(155,89,182,.05);border:1px solid rgba(155,89,182,.2);border-radius:var(--r2);overflow:hidden;display:flex;flex-direction:column;transition:transform 0.3s;cursor:pointer;"
+          onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+          <img
+            src="https://vinuni.edu.vn/wp-content/uploads/2024/08/ly-thuyet-tam-ly-hoc-tinh-yeu-phan-tich-va-ap-dung-thuc-tien-hinh-1.jpg"
+            alt="Tâm lý tình cảm" style="width:100%;height:160px;object-fit:cover;" />
+          <div style="padding:2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;">
+              <div
+                style="width:50px;height:50px;border-radius:50%;background:rgba(155,89,182,.15);border:2px solid rgba(155,89,182,.3);display:flex;align-items:center;justify-content:center;font-weight:800;color:#9b59b6;flex-shrink:0;font-size:1.2rem;">
+                04</div>
+              <h3 style="color:#9b59b6;font-weight:700;font-size:1rem;margin:0;">Tâm lý – Tình cảm</h3>
+            </div>
+            <p style="color:var(--muted);font-size:.85rem;line-height:1.6;margin-bottom:1.25rem;">Nơi các thành viên
+              được
+              yêu thương, chăm sóc, chia sẻ. Ngày càng quan trọng.</p>
+
+            <div
+              style="background:rgba(155,89,182,.08);border-left:3px solid rgba(155,89,182,.4);padding:1rem;border-radius:var(--r);margin-bottom:0.75rem;">
+              <h4 style="color:#9b59b6;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Sự thay đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Gắn kết bằng tự nguyện, thấu hiểu,
+                chia sẻ sở thích thay vì áp lực dư luận hay tài sản.</p>
+            </div>
+            <div
+              style="background:rgba(155,89,182,.08);border-left:3px solid rgba(155,89,182,.4);padding:1rem;border-radius:var(--r);">
+              <h4 style="color:#9b59b6;font-weight:700;font-size:.85rem;margin:0 0 .5rem 0;">Bản chất không đổi</h4>
+              <p style="color:var(--muted);font-size:.8rem;line-height:1.6;margin:0;">Gia đình vẫn là tổ ấm mang lại
+                tình
+                yêu thương vô điều kiện và phục hồi tâm lý.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KẾT LUẬN CHỨC NĂNG -->
+      <div
+        style="margin-top:2.5rem;padding:1.5rem;background:rgba(201,168,76,.1);border-radius:var(--r2);border:1px solid rgba(201,168,76,.2);"
+        class="reveal">
+        <h3
+          style="color:var(--gold);font-size:1rem;font-weight:700;margin-bottom:1rem;display:flex;align-items:center;gap:8px;">
+          <span style="display:inline-block;width:3px;height:16px;background:var(--gold);border-radius:2px;"></span>
+          Kết luận: Biến đổi hình thức, không mất đi bản chất
+        </h3>
+        <p style="color:var(--muted);font-size:.95rem;line-height:1.8;margin:0;">
+          Sự phổ biến của gia đình hạt nhân gây ảnh hưởng cho sự thay đổi hình thức thực hiện các chức năng cốt lõi chứ
+          không làm mất đi hoàn toàn. Mỗi chức năng đều <strong style="color:var(--gold2);">có thể</strong> được thực
+          hiện đầy đủ trong gia đình hạt nhân hay đại gia đình — vấn đề là <strong style="color:var(--gold2);">ý thức và
+            trách nhiệm</strong> của các thành viên, không phải quy mô hay cấu trúc.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="page-nav-bar">
+    <div class="page-nav-inner">
+      <a href="tinh-huong.html" class="page-nav-btn">← 1 · Phân tích</a>
+      <div class="page-nav-center"><strong>2 / 3</strong>Căn cứ Lý luận</div>
+      <a href="so-sanh.html" class="page-nav-btn">3 · Nhận định →</a>
     </div>
   </div>
-</section>
 
-<div class="page-nav-bar">
-  <div class="page-nav-inner">
-    <a href="tinh-huong.html" class="page-nav-btn">← 1 · Phân tích</a>
-    <div class="page-nav-center"><strong>2 / 3</strong>Căn cứ Lý luận</div>
-    <a href="so-sanh.html" class="page-nav-btn">3 · Nhận định →</a>
-  </div>
-</div>
+  <footer>
+    <div class="container">
+      <p class="footer-title">MLN131 — Chủ nghĩa Xã hội Khoa học</p>
+      <p>Chương 7: Vấn đề Gia đình trong Thời kỳ Quá độ lên Chủ nghĩa Xã hội</p>
+      <p style="margin-top:.4rem;">FPT University · Sản phẩm sáng tạo · 2026</p>
+    </div>
+  </footer>
 
-<footer>
-  <div class="container">
-    <p class="footer-title">MLN131 — Chủ nghĩa Xã hội Khoa học</p>
-    <p>Chương 7: Vấn đề Gia đình trong Thời kỳ Quá độ lên Chủ nghĩa Xã hội</p>
-    <p style="margin-top:.4rem;">FPT University · Sản phẩm sáng tạo · 2026</p>
-  </div>
-</footer>
-
-<script>
-  const np = document.getElementById('navProgress');
-  window.addEventListener('scroll', () => {
-    np.style.width = (window.scrollY/(document.documentElement.scrollHeight-window.innerHeight)*100)+'%';
-  });
-  document.querySelectorAll('.reveal').forEach(el => {
-    new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.12}).observe(el);
-  });
-  const navToggle = document.getElementById('navToggle');
-  const navLinks  = document.getElementById('navLinks');
-  if(navToggle) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      navLinks.classList.toggle('open');
+  <script>
+    const np = document.getElementById('navProgress');
+    window.addEventListener('scroll', () => {
+      np.style.width = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
     });
-    document.addEventListener('click', e => {
-      if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
-        navToggle.classList.remove('open');
-        navLinks.classList.remove('open');
-      }
+    document.querySelectorAll('.reveal').forEach(el => {
+      new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: .12 }).observe(el);
     });
-  }
-</script>
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('open');
+        navLinks.classList.toggle('open');
+      });
+      document.addEventListener('click', e => {
+        if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+          navToggle.classList.remove('open');
+          navLinks.classList.remove('open');
+        }
+      });
+    }
+  </script>
 </body>
+
 </html>
